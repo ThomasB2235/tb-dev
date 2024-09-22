@@ -1,0 +1,10 @@
+<p>Thomas Bureller</p>
+
+<mat-card class="language">
+  <mat-card-content>
+    <h2 class="example-h2">langue</h2>
+    <section>
+      <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)">{{lang}}</mat-slide-toggle>
+    </section>
+  </mat-card-content>
+</mat-card>
