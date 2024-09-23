@@ -4,14 +4,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule} from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatRadioModule, FormsModule, MatCheckboxModule, MatSlideToggleModule, MatCardModule],
+  imports: [MatRadioModule, FormsModule, MatCheckboxModule, MatSlideToggleModule, MatCardModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -22,7 +22,8 @@ export class HeaderComponent implements OnInit {
   lang: string = 'fr';
   isChecked = false;
 
-  constructor(private translateService: TranslateService) {
+    constructor(private translateService: TranslateService) {
+
   }
 
   ngOnInit(): void {
@@ -38,10 +39,11 @@ export class HeaderComponent implements OnInit {
 
   } else {
     this.lang = 'fr';
+    console.log('francias')
     localStorage.setItem('lang', this.lang);
     this.translateService.use('fr');
-
   }
+  console.log(this.lang);
 }
 
 }

@@ -1,8 +1,8 @@
-<p>Thomas Bureller</p>
+<h2>Thomas Bureller</h2>
 
 <mat-card class="language">
   <mat-card-content>
-    <h2 class="example-h2">langue</h2>
+    <p>{{'home' | translate}}</p>
     <section>
       <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)">{{lang}}</mat-slide-toggle>
     </section>
