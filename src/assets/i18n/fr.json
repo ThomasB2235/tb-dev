@@ -7,6 +7,9 @@
   "email":"e-mail",
   "Mobile":"Mobile",
   "subscribe":"Abonnez-vous",
-  "wip":"Le site est en construction"
-
+  "wip":"Le site est en construction",
+  "cv":"CV",
+  "skills": "Compétences",
+  "follow": "Suivez-moi sur",
+  "developer": "Développeur Full Stack"
 }

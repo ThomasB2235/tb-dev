@@ -7,6 +7,9 @@
   "email":"Email",
   "Mobile":"Mobile",
   "subscribe":"Subscribe Now",
-  "wip":"Website under construction"
-
+  "wip":"Website under construction",
+  "cv":"CV",
+  "skills": "Skills",
+  "follow": "Follow me",
+  "developer": "Full Stack Developer"
 }

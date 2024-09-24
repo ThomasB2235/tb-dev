@@ -1,12 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #ffb370;
+}
 
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 app-footer {
-    position:fixed;
-    bottom:0px;
-    background-color:pink;
-    width:100%;
+  position: fixed;
+  bottom:0px;
+  width:100%;
+  margin-bottom: 0px;
 }
+
+app-header {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 2vh;
+  height: 110vh;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  font-size: small;
+  color: rgb(194, 194, 194);
+  animation: 2s ease-out 0s 1 slideInFromTop;
+  background-color: #0e374f;
+
+}
+
+.mat-grid-list {
+  top: -8vh;
+  z-index: -5;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.mat-grid-tile {
+  padding: 5%;
+  max-width: 90%;
+}
+
+#mat-mdc-slide-toggle-1-label {
+  color: rgb(194, 194, 194);
+}
+

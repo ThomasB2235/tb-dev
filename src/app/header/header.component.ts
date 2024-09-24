@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
   }
 
   onChange(choice: boolean) {
-    console.log(choice);
    if(choice) {
     this.lang  = 'en';
     localStorage.setItem('lang', this.lang);
@@ -39,11 +38,9 @@ export class HeaderComponent implements OnInit {
 
   } else {
     this.lang = 'fr';
-    console.log('francias')
     localStorage.setItem('lang', this.lang);
     this.translateService.use('fr');
   }
-  console.log(this.lang);
 }
 
 }

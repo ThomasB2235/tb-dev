@@ -1,10 +1,8 @@
-<h2>Thomas Bureller</h2>
+<h2 title="Thomas Bureller FullStack developpeur">Thomas Bureller</h2>
 
-<mat-card class="language">
-  <mat-card-content>
-    <p>{{'home' | translate}}</p>
     <section>
-      <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)">{{lang}}</mat-slide-toggle>
+      <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)" class="language">{{lang}}</mat-slide-toggle>
     </section>
-  </mat-card-content>
-</mat-card>
+
+
+
