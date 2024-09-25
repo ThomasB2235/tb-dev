@@ -1,6 +1,6 @@
 {
   "home":"Home",
-  "about":"About Us",
+  "about":"About me",
   "share":"Share",
   "info":"Channel Information",
   "name":"Names",
@@ -11,5 +11,6 @@
   "cv":"CV",
   "skills": "Skills",
   "follow": "Follow me",
-  "developer": "Full Stack Developer"
+  "developer": "Full Stack Developer",
+  "projects": "My products"
 }

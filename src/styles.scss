@@ -1,10 +1,20 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url('assets/fonts/LeagueSpartan.ttf') format('truetype');
+}
+
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+  font-family: LeagueSpartan;
+ }
+
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #ffb370;
+  min-height: 100vh;
+  background-image: url('assets/images/Circuit_Primary.svg');
+  background-size: cover;
 }
 
 @keyframes slideInFromTop {
@@ -16,8 +26,23 @@ body {
   }
 }
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(110%);
+  }
+  70% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideInFromLeft {
   0% {
+    transform: translateX(-100%);
+  }
+  70% {
     transform: translateX(-100%);
   }
   100% {
@@ -27,38 +52,150 @@ body {
 
 app-footer {
   position: fixed;
-  bottom:0px;
-  width:100%;
-  margin-bottom: 0px;
+  bottom: 50vh;
+  right: 0vw;
+  width: 5vw;
+}
+
+.logoSize {
+  animation: 2s ease-out 0s 1 slideInFromRight;
+  font-size: 4vh;
+  color: rgb(194, 194, 194);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15vh;
 }
 
 app-header {
-  padding-left: 2vh;
-  padding-right: 2vh;
-  padding-top: 2vh;
-  height: 110vh;
+  height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  font-size: small;
+  font-family: LeagueSpartan;
+  color: rgb(194, 194, 194);
+  animation: 1.5s ease-out 0s 1 slideInFromTop;
+  background-color: #0e374f;
+  background-image: url('assets/images/Curve_Line.svg');
+  background-size: cover;
+}
+
+app-header section {
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-between;
-  font-size: small;
-  color: rgb(194, 194, 194);
-  animation: 2s ease-out 0s 1 slideInFromTop;
-  background-color: #0e374f;
-
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 2vh;
 }
 
-.mat-grid-list {
-  top: -8vh;
+ol {
+ list-style-type: none !important;
+ padding-inline-start: 0px;
+}
+
+li {
+  margin-top: 1vh;
+  font-family: LeagueSpartan;
+  font-size: xx-large;
+ }
+
+nav {
+  position: relative;
+  top: -80vh;
+}
+
+.navSlide {
+  height: 14vh;
+  width: 14vw;
+  padding-top: 1vw;
+  padding-right: 1vh;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.container {
   z-index: -5;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-.mat-grid-tile {
-  padding: 5%;
-  max-width: 90%;
+.orange {
+  background-color: #ffb370;
+}
+.redwine {
+  background-image: url('assets/images/Circuit_Primary.svg');
+  background-size: cover;
+}
+.deepblue {
+  background-color: #384358;
+}
+
+.slide {
+  height: 105vh;
 }
 
 #mat-mdc-slide-toggle-1-label {
   color: rgb(194, 194, 194);
 }
 
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px) and (max-width:600px)  {
+
+.navSlide {
+  height: 15vh;
+  width: 100vw;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0px 0px 0px 0px;
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+body  {
+  background-color: white;
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0vh;
+  right: 0vw;
+  width: 5vw;
+}
+
+
+}
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px)  {
+
+ }
+   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px)  {
+
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  {
+
+   }
+   /* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+
+  .container {
+    position: relative;
+    max-height: 100%;
+    top: -57vh;
+  }
+
+  .navSlide {
+    height: 15vh;
+    width: 15vw;
+    text-align: end;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0px 5px 5px 0px;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }
+
+ }
+   /* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+ }

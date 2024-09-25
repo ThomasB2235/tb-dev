@@ -1,8 +1,15 @@
-<h2 title="Thomas Bureller FullStack developpeur">Thomas Bureller</h2>
+<div class="loading"></div>
 
-    <section>
-      <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)" class="language">{{lang}}</mat-slide-toggle>
-    </section>
+<section>
+  <div title="Thomas Bureller FullStack developpeur">TB logo</div>
+  <mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onChange($event)"
+    class="language">{{lang}}</mat-slide-toggle>
+</section>
+
+<div class="homePageTitle">
+  <h1>Thomas Bureller</h1>
+  <h2>{{'developer' | translate}}</h2>
+</div>
 
 
 

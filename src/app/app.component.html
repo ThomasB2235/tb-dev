@@ -1,12 +1,17 @@
 <app-header></app-header>
 
-<mat-grid-list cols="1" rowHeight="120vh">
-  @for (tile of tiles; track tile) {
-    <mat-grid-tile
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows"
-      [style.background]="tile.color">{{tile.text | translate}}</mat-grid-tile>
-  }
-</mat-grid-list>
+<nav>
+  <ol>
+    <li class="navSlide redwine">{{'skills' | translate}}</li>
+    <li class="navSlide orange">{{'projects' | translate}}</li>
+    <li class="navSlide deepblue">{{'about' | translate}}</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="slide redwine">{{'skills' | translate}}</div>
+  <div class="slide orange">{{'projects' | translate}}</div>
+  <div class="slide deepblue">{{'about' | translate}}</div>
+</div>
 
 <app-footer></app-footer>

@@ -30,13 +30,6 @@ export interface Tile {
 })
 export class AppComponent {
 
-  tiles: Tile[] = [
-    {text: 'developer', cols: 1, rows: 1, color: '#ffb370'},
-    {text: 'cv', cols: 1, rows: 1, color: '#92414d'},
-    {text: 'skills', cols: 1, rows: 1, color: '#ffd4ac'},
-    {text: 'about', cols: 1, rows: 1, color: '#384358'},
-  ];
-
   constructor(private translateService: TranslateService) {
     this.translateService.addLangs(['fr', 'en']);
     this.translateService.setDefaultLang(localStorage.getItem('lang') || 'fr');
