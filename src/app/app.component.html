@@ -2,16 +2,16 @@
 
 <nav>
   <ol>
-    <li class="navSlide redwine">{{'skills' | translate}}</li>
-    <li class="navSlide orange">{{'projects' | translate}}</li>
-    <li class="navSlide deepblue">{{'about' | translate}}</li>
+    <a href="#linkSkills"><li class="navSlide redwine mobileNavSkills">{{'skills' | translate}}</li></a>
+    <a href="#linkProjects"><li class="navSlide orange mobileNavProjects">{{'projects' | translate}}</li></a>
+    <a href="#linkAbout"><li class="navSlide deepblue mobileNavAbout">{{'about' | translate}}</li></a>
   </ol>
 </nav>
 
 <div class="container">
-  <div class="slide redwine">{{'skills' | translate}}</div>
-  <div class="slide orange">{{'projects' | translate}}</div>
-  <div class="slide deepblue">{{'about' | translate}}</div>
+  <div class="slide redwine" id="linkSkills">{{'skills' | translate}}</div>
+  <div class="slide orange" id="linkProjects">{{'projects' | translate}}</div>
+  <div class="slide deepblue" id="linkAbout">{{'about' | translate}}</div>
 </div>
 
 <app-footer></app-footer>

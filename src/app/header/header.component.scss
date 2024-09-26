@@ -17,3 +17,23 @@ h1 {
   position: relative;
   margin: auto;
 }
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:300px) and (max-width:599px)  {
+  h2 {
+    font-weight: bolder;
+    font-size: 4vh;
+  }
+
+  h1 {
+    font-size: 4vh;
+    font-weight: lighter;
+  }
+
+  .homePageTitle {
+    position: relative;
+    margin: auto;
+    top: -30vh;
+  }
+
+ }
