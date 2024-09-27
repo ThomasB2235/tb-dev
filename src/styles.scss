@@ -3,6 +3,11 @@
   src: url('assets/fonts/LeagueSpartan.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: MonotonRegular;
+  src: url('assets/fonts/MonotonRegular.ttf') format('truetype');
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body {
@@ -23,6 +28,18 @@ body {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes opacity0to100 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -48,6 +65,11 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+
+.logoFont {
+  font-family: MonotonRegular;
+  font-size: xx-large;
 }
 
 app-footer {
@@ -105,6 +127,12 @@ nav {
   top: -80vh;
 }
 
+.linkNav{
+  display: block;
+  height: 14vh;
+  width: 14vw;
+}
+
 .navSlide {
   height: 14vh;
   width: 14vw;
@@ -144,12 +172,15 @@ a:link {
   text-decoration: none;
 }
 a:visited {
+  color: white;
   text-decoration: none;
 }
 a:hover {
+  color: white;
   text-decoration: none;
 }
 a:active {
+  color: white;
   text-decoration: none;
 }
 
@@ -216,7 +247,7 @@ a:active {
   }
 
   .logoSize {
-    animation: 2s ease-out 0s 1 slideInFromRight;
+    animation: 3s ease-out 0s 1 opacity0to100;
     font-size: 4vh;
     color: rgb(194, 194, 194);
     display: flex;
@@ -234,6 +265,10 @@ a:active {
   width: 60vw;
   background-image: url('assets/images/Mass_Circles_Mobile.svg') !important;
   background-size: cover;
+}
+
+.linkNavMobileProjects {
+  width: 60vw;
 }
 
 .mobileNavAbout {
@@ -266,7 +301,10 @@ a:active {
     border-radius: 0px 5px 5px 0px;
     animation: 2s ease-out 0s 1 slideInFromLeft;
   }
-
+  .linkNav{
+    height: 14vh;
+    width: 14vw;
+  }
  }
    /* hi-res laptops and desktops */
 @media (min-width:1281px) {
