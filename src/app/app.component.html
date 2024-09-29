@@ -2,16 +2,33 @@
 
 <nav>
   <ol>
-    <li class="navSlide redwine mobileNavSkills" ><a href="#linkSkills" class="linkNav mobileNavSkills">{{'skills' | translate}}</a></li>
+    <li class="navSlide redwine mobileNavSkills"><a href="#linkSkills" class="linkNav mobileNavSkills">{{'skills' | translate}}</a></li>
     <li class="navSlide orange mobileNavProjects"><a href="#linkProjects" class="linkNav linkNavMobileProjects">{{'projects' | translate}}</a></li>
     <li class="navSlide deepblue mobileNavAbout"><a href="#linkAbout" class="linkNav mobileNavAbout">{{'about' | translate}}</a></li>
   </ol>
 </nav>
 
 <div class="container">
-  <div class="slide redwine" id="linkSkills">{{'skills' | translate}}</div>
-  <div class="slide orange" id="linkProjects">{{'projects' | translate}}</div>
-  <div class="slide deepblue" id="linkAbout">{{'about' | translate}}</div>
+  <div class="slide redwine" id="linkSkills">
+    <div>
+      <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
+    </div>
+    <div class="insidePage">
+    </div>
+    <div class="titleSlide">{{'skills' | translate}}</div>
+  </div>
+  <div class="slide orange" id="linkProjects">
+    <div>
+      <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
+    </div>
+    {{'projects' | translate}}
+  </div>
+  <div class="slide deepblue" id="linkAbout">
+    <div>
+      <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
+    </div>
+    {{'about' | translate}}
+  </div>
 </div>
 
 <app-footer></app-footer>

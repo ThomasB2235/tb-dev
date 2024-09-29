@@ -74,7 +74,7 @@ body {
 
 app-footer {
   position: fixed;
-  bottom: 50vh;
+  bottom: 40vh;
   right: 0vw;
   width: 5vw;
 }
@@ -90,7 +90,7 @@ app-footer {
 }
 
 app-header {
-  height: 100vh;
+  height: 101vh;
   display: flex !important;
   flex-direction: column !important;
   font-size: small;
@@ -144,7 +144,6 @@ nav {
 }
 
 .container {
-  z-index: -5;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
@@ -164,9 +163,9 @@ nav {
 }
 
 #mat-mdc-slide-toggle-1-label {
+  font-family: LeagueSpartan;
   color: rgb(194, 194, 194);
 }
-
 
 a:link {
   text-decoration: none;
@@ -184,6 +183,42 @@ a:active {
   text-decoration: none;
 }
 
+.backTop {
+  position: relative;
+  margin-top: 2vh;
+  margin-left: 49vw;
+  color: rgba(194, 194, 194, 0.75);
+  font-size: xx-large;
+}
+
+.backTop:hover {
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  font-size: xx-large;
+}
+
+.insidePage {
+  width: 80vw;
+  height: 72vh;
+  font-size: 10em;
+  padding-left: 2vw;
+  color: #384358;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+  margin: auto;
+  margin-top: 5vh;
+  background-color: #fff5e8;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;}
+
+.titleSlide {
+  font-size: 5em;
+  margin-top: 8vh;
+  text-align: center;
+  font-family: LeagueSpartan;
+  font-weight: bold;
+  color: #fff5e8;
+}
 
 /* smartphones, Android phones, portrait android */
 @media (min-width:300px) and (max-width:599px)  {
@@ -192,9 +227,26 @@ a:active {
     height: 101vh;
   }
 
+  .titleSlide {
+    font-size: 2em;
+    margin-top: 5vh;
+    text-align: center;
+    font-family: LeagueSpartan;
+    font-weight: bolder;
+    color: rgba(194, 194, 194, 1);
+  }
+
   nav {
     position: relative;
     top: -65vh;
+  }
+
+  .backTop {
+    position: relative;
+    margin-top: 2vh;
+    right: 2vw;
+    color: rgba(194, 194, 194, 0.75);
+    font-size: xx-large;
   }
 
   li {
@@ -274,6 +326,7 @@ a:active {
 .mobileNavAbout {
   width: 50vw;
 }
+
 
  }
    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
