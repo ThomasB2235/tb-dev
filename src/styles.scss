@@ -167,6 +167,11 @@ nav {
   color: rgb(194, 194, 194);
 }
 
+.mdc-switch__track::after {
+  background-color: #92414d;
+
+}
+
 a:link {
   text-decoration: none;
 }
@@ -202,10 +207,12 @@ a:active {
   height: 72vh;
   font-size: 10em;
   padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
   color: #384358;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: auto;
   margin-top: 5vh;
   background-color: #fff5e8;

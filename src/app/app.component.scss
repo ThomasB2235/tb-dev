@@ -1,0 +1,89 @@
+/**
+* Quarter Circles
+*/
+
+.main {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.quarter {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+.quarter:hover {
+  background-color: #384358;
+}
+.quarter1 {
+  top: 0;
+  left: 0;
+  background-color: #ffd4ac;
+  border-radius: 100% 0 0 0;
+}
+
+.quarter2 {
+  top: 0;
+  right: 0;
+  background-color: #ffb370;
+  border-radius: 0 100% 0 0;
+}
+.quarter3 {
+  bottom: 0;
+  left: 0;
+  background-color: #eb3f42;
+  border-radius: 0 0 0 100%;
+}
+.quarter4 {
+  bottom: 0;
+  right: 0;
+  background-color: #f57959;
+  border-radius: 0 0 100% 0;
+}
+.cutout {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.partskills {
+  font-size: 0.1em;
+  height: 10vh;
+  color: #384358;
+}
+
+.knwoledge {
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.quarter1:hover .front {
+  border: 1px solid #384358;
+  background-color: aquamarine;
+}
+
+.front {
+  background-color: #ffd4ac;
+}
+
+.back {
+  background-color: #ffb370;
+}
+
+.database {
+  background-color: #f57959;
+}
+
+.devops {
+  background-color: #eb3f42;
+}
