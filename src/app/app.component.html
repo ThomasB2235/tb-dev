@@ -2,33 +2,79 @@
 
 <nav>
   <ol>
-    <li class="navSlide redwine mobileNavSkills"><a href="#linkSkills" class="linkNav mobileNavSkills">{{'skills' | translate}}</a></li>
-    <li class="navSlide orange mobileNavProjects"><a href="#linkProjects" class="linkNav linkNavMobileProjects">{{'projects' | translate}}</a></li>
-    <li class="navSlide deepblue mobileNavAbout"><a href="#linkAbout" class="linkNav mobileNavAbout">{{'about' | translate}}</a></li>
+    <li class="navSlide redwine mobileNavSkills"><a href="#linkSkills" class="linkNav mobileNavSkills">{{'skills' |
+        translate}}</a></li>
+    <li class="navSlide orange mobileNavProjects"><a href="#linkProjects"
+        class="linkNav linkNavMobileProjects">{{'projects' | translate}}</a></li>
+    <li class="navSlide deepblue mobileNavAbout"><a href="#linkAbout" class="linkNav mobileNavAbout">{{'about' |
+        translate}}</a></li>
   </ol>
 </nav>
 
 <div class="container">
-  <div class="slide redwine" id="linkSkills">
+  <div class="slide skills" id="linkSkills">
     <div>
       <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
     </div>
     <div class="insidePage">
-      <div class="main">
-        <div class="quarter quarter1"></div>
-        <div class="quarter quarter2"></div>
-        <div class="quarter quarter3"></div>
-        <div class="quarter quarter4"></div>
-        <div class="cutout"></div>
+      <div class="knowledge front">
+        <div class="iconLogo">
+          <div class="icon"><i class="fa-solid fa-display"></i></div>
+        </div>
+        <div class="textContent">
+          <h2>Front-End</h2>
+          <div class="line"></div>
+          <p>Angular</p>
+          <p>Angular Material</p>
+          <p>Semantic UI</p>
+          <p>Responsive Webdesign</p>
+          <p>WCAG</p>
+        </div>
       </div>
-      <div class="knwoledge">
-        <div class="front partskills">Front-end</div>
-        <div class="back partskills">Back-end</div>
-        <div class="database partskills">{{'database' | translate}}</div>
-        <div class="devops partskills">Devops</div>
+      <div class="knowledge back">
+        <div class="iconLogo">
+          <div class="icon"><i class="fa-solid fa-floppy-disk"></i></div>
+        </div>
+        <div class="textContent">
+          <h2>Back-End</h2>
+          <div class="line"></div>
+          <p>NodeJS</p>
+          <p>NestJS</p>
+          <p>LoopBack</p>
+          <p>RestAPI</p>
+          <p>Postman</p>
+        </div>
+      </div>
+      <div class="knowledge database">
+        <div class="iconLogo">
+          <div class="icon"><i class="fa-solid fa-database"></i></div>
+        </div>
+        <div class="textContent">
+          <h2>{{'database' | translate}}</h2>
+          <div class="line"></div>
+          <p>PostGreSQL</p>
+          <p>SQLServer</p>
+          <p>MongoDB</p>
+          <p>Compass</p>
+          <p>DBeaver</p>
+        </div>
+      </div>
+      <div class="knowledge devops">
+        <div class="iconLogo">
+          <div class="icon"><i class="fa-solid fa-code"></i></div>
+        </div>
+        <div class="textContent">
+          <h2>DevOps</h2>
+          <div class="line"></div>
+          <p>Jenkins</p>
+          <p>Azure Devops</p>
+          <p>Ansible</p>
+          <p>Linux</p>
+          <p>Git</p>
+        </div>
       </div>
     </div>
-    <div class="titleSlide">{{'skills' | translate}}</div>
+    <div class="titleSlide skillsResponsive">{{'skills' | translate}}</div>
   </div>
   <div class="slide orange" id="linkProjects">
     <div>
