@@ -33,11 +33,6 @@
   justify-content: center;
 }
 
-.icon:hover {
-  background-color: #ffb370;
-  color: #384358;
-}
-
 .textContent {
   height: 50vh;
   width: 15vw;
@@ -56,6 +51,24 @@
   height: 2px;
   background-color: #92414d;
   margin-bottom: 3vh;
+}
+
+.skillsBackground {
+  background: linear-gradient(300deg,#fff5e8,#ffd4ac,#ffb370);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* smartphones, Android phones, landscape iPhone */
