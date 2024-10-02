@@ -53,6 +53,15 @@
   margin-bottom: 3vh;
 }
 
+.wip {
+  margin-top: 20vh;
+  text-align: center;
+  font-size: 15em;
+  background: -webkit-linear-gradient(#92414d, #f57959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .skillsBackground {
   background: linear-gradient(300deg,#fff5e8,#ffd4ac,#ffb370);
   background-size: 180% 180%;
@@ -61,6 +70,21 @@
 
 .mat-slide-toggle-bar {
   background-color: #e47171 !important;
+}
+
+.titleproducts {
+  color: #0e374f;
+}
+
+.titleAbout {
+  color: #fff5e8;
+}
+
+.waitingwip {
+  margin-top: 10vh;
+  font-size: 3em;
+  color: #0e374f;
+  text-align: center;
 }
 
 @keyframes gradient-animation {
@@ -124,5 +148,16 @@
     background-color: #92414d;
     margin-bottom: 3vh;
   }
+
+  .waitingwip {
+    font-size: 3vh;;
+  }
+
+  .titleproducts {
+    color: #0e374f;
+    position: relative;
+    top: -55vh;
+  }
+
 
  }
