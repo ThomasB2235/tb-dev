@@ -59,6 +59,10 @@
   animation: gradient-animation 10s ease infinite;
 }
 
+.mat-slide-toggle-bar {
+  background-color: #e47171 !important;
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
