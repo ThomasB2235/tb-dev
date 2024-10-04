@@ -20,6 +20,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: #92414d;
+  overflow-x: hidden !important;
+
 }
 
 @keyframes slideInFromTop {
@@ -226,8 +228,11 @@ a:active {
     color: rgba(194, 194, 194, 1);
   }
 
-  .titleResponsive {
+  .titleSkills {
     margin-top: 80vh;
+  }
+
+  .titleResponsive {
     color: #92414d,
   }
 
@@ -283,7 +288,7 @@ a:active {
   .container {
     position: relative;
     max-height: 100%;
-    top: -52vh;
+    top: -50vh;
   }
 
   body {
@@ -291,6 +296,7 @@ a:active {
     max-width: 100%;
     max-height: 100vh;
     background-color: #92414d;
+    overflow-x: hidden !important;
   }
 
   .logoSize {

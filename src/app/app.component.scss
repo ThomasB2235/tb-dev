@@ -87,6 +87,49 @@
   text-align: center;
 }
 
+@keyframes mymove {
+  0% {box-shadow: none;
+  }
+  50% {box-shadow: none;
+  }
+  100% {box-shadow: #ffb370 0px 30px 30px -10px;
+  }
+}
+
+
+.borderPhoto {
+  height: 220px;
+  width: 100vw;
+  // border-radius: 110px;
+  box-shadow: #ffb370 0px 30px 30px -10px;
+  display: flex;
+  top: 4vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: #0e374f;
+  -webkit-text-fill-color: transparent;
+  animation: mymove 4s;
+}
+
+.photoProfile {
+  height: 200px;
+  width: 200px;
+  background: url('../assets/images/profilblue.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
+.photoProfile:hover {
+  height: 200px;
+  width: 200px;
+  background: url('../assets/images/profilblueopacity.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
