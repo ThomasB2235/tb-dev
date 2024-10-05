@@ -87,29 +87,22 @@
   text-align: center;
 }
 
-@keyframes mymove {
-  0% {box-shadow: none;
-  }
-  50% {box-shadow: none;
-  }
-  100% {box-shadow: #ffb370 0px 30px 30px -10px;
-  }
-}
 
 
 .borderPhoto {
   height: 220px;
-  width: 100vw;
-  // border-radius: 110px;
-  box-shadow: #ffb370 0px 30px 30px -10px;
+  width: 75vw;
   display: flex;
   top: 4vh;
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 10vw;
+  padding-right: 0.5vw;
   align-items: center;
   background: #0e374f;
-  -webkit-text-fill-color: transparent;
-  animation: mymove 4s;
+  border-top-right-radius: 110px;
+  border-bottom-right-radius: 110px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .photoProfile {
@@ -119,6 +112,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;
+  box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
 }
 
 .photoProfile:hover {
@@ -128,6 +122,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;
+}
+
+.aboutContent {
+  width: 80vw;
+  height: 45vh;
+  border: 1px solid white;
+  margin: auto;
+  position: relative;
+  top: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutButton {
+  border: 1px solid white;
+  width: 20vw;
+  height: 20vh;
+  color: white;
+  font-family: LeagueSpartan;
+  text-align: center;
+  padding: auto;
+  line-height: 20vh;
+  background: #0e374f;
+  border: 1px solid white;
+  font-size: 1.5em;
 }
 
 @keyframes gradient-animation {
