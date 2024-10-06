@@ -102,7 +102,7 @@
   background: #0e374f;
   border-top-right-radius: 110px;
   border-bottom-right-radius: 110px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0,0,0,0.7) 0px 5px 15px;
 }
 
 .photoProfile {
@@ -127,29 +127,215 @@
 .aboutContent {
   width: 80vw;
   height: 45vh;
-  border: 1px solid white;
   margin: auto;
   position: relative;
   top: 15vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .aboutButton {
-  border: 1px solid white;
   width: 20vw;
   height: 20vh;
-  color: white;
+  color: #fff5e8;
   font-family: LeagueSpartan;
   text-align: center;
   padding: auto;
-  line-height: 20vh;
-  background: #0e374f;
-  border: 1px solid white;
-  font-size: 1.5em;
+  background: #384358;
+  border: 1px solid #fff5e8;
+  font-size: 25px;
+  box-shadow: black 0px 5px 15px;
 }
+
+.aboutButton:hover {
+  width: 20vw;
+  height: 45vh;
+  color: #fff5e8;
+  font-family: LeagueSpartan;
+  text-align: center;
+  padding: auto;
+  background: #0e374f;
+  border: 5px solid #ffb370;
+  font-size: 25px;
+  box-shadow: #ffb370 0px 5px 15px;
+  animation: size-animation 0.65s ease-in-out;
+  font-size: 30px;
+}
+
+// Pacman Content
+
+.relative {
+  position: relative;
+}
+
+.pacmanLine {
+  border: 1px solid #0e374f;
+}
+
+.H1 {
+  top: 4.5vh;
+  position: absolute;
+  height: 2.5em;
+  width: 100vw;
+}
+
+.H2 {
+  top: 39.5vh;
+  position: absolute;
+  height: 2.5em;
+  width: 100vw;
+}
+
+.ghost {
+  position: absolute;
+  animation: all 14s infinite;
+  font-size: 2em;
+  z-index: 0;
+}
+
+.cGhost {
+top:60vh;
+color: #92414d;
+ animation: ghost-c-animation 10s ease-in-out infinite;
+
+}
+
+@keyframes ghost-animation {
+  100% {
+right: 100vw;
+  }
+}
+
+@keyframes ghost-c-animation {
+  0% {
+    left: -5vw; /* Départ à gauche du parent */
+  }
+  20% {
+    left: 20vw; /* Va jusqu'au bord droit du viewport */
+     top: 60vh;
+  }
+  40% {
+    top: 40vh;
+    left: 20vw;
+
+  }
+  100% {
+    top: 40vh;
+    left: 100vw; /* Retourne à gauche du parent */
+  }
+}
+
+.aGhost {
+  top: 5vh;
+  left: -5vw;
+  color:#ffb370;
+  animation: ghost-a-animation 14s infinite;
+}
+
+@keyframes ghost-a-animation {
+  0% {
+    left: -5vw; /* Départ à gauche du parent */
+  }
+  20% {
+    left: 30vw; /* Va jusqu'au bord droit du viewport */
+     top: 5vh;
+  }
+  40% {
+    top: 40vh;
+    left: 30vw;
+
+  }
+  100% {
+    top: 40vh;
+    left: 120vw; /* Retourne à gauche du parent */
+  }
+}
+
+.bGhost {
+  color:#f57959;
+  top: 30vh;
+  right: -5vw;
+  animation:  ghost-b-animation 12s infinite;
+}
+
+@keyframes ghost-b-animation {
+  0% {
+    top: 30vh;
+    right: -5vw; /* Départ à gauche du parent */
+  }
+  20% {
+     top: 30vh;
+     right: 30vw;
+  }
+  30% {
+    top: 50vh;
+    right: 30vw;
+
+  }
+  100% {
+    top: 50vh;
+    right: 120vw; /* Retourne à gauche du parent */
+  }
+}
+
+.dGhost {
+  top: 80vh;
+  color:#eb3f42;
+  animation:  move-left-right 12s infinite;
+  }
+
+@keyframes move-left-right {
+  0% {
+    left: -5vw; /* Départ à gauche du parent */
+  }
+  50% {
+    left: 120vw; /* Va jusqu'au bord droit du viewport */
+  }
+  100% {
+    left: -5vw; /* Retourne à gauche du parent */
+  }
+}
+.eGhost {
+  top: -10vh;
+  right: 15vw;
+  color:#ffd4ac;
+  animation:  move-top-bottom 8s infinite;
+  }
+
+@keyframes move-top-bottom {
+  0% {
+    top: -10vh;
+    right: 15vw;
+  }
+  50% {
+    top: 85vh;
+    right: 15vw; /* Va jusqu'au bord droit du viewport */
+  }
+  100% {
+    right: 110vw;
+    top: 85vh;
+  }
+}
+
+
+@keyframes size-animation {
+  0% {
+    height: 20vh;
+    border: 1px solid #e47171;
+    box-shadow: none;
+    background-color: #384358;
+    font-size: 25px;
+  }
+  100% {
+    height: 45vh;
+    border: 1px solid #ffb370;
+    box-shadow: none;
+    font-size: 30px;
+  }
+}
+
 
 @keyframes gradient-animation {
   0% {
@@ -172,6 +358,26 @@
     margin:auto;
     display: flex;
     flex-direction: column;
+  }
+
+  .ghost {
+    display: none;
+  }
+
+  .aboutContent {
+    flex-direction: column;
+  }
+
+  .pacmanLine {
+    display: none
+}
+
+  .aboutButton {
+    width: 80vw;
+  }
+
+  .aboutButton:hover {
+    width: 80vw;
   }
 
   .knowledge {
