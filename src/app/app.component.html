@@ -78,34 +78,32 @@
   </div>
   <div class="slide orange" id="linkProjects">
     <div>
-      <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
+      <a class="backTop" href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
     </div>
     <div class="wip"><i class="fa-solid fa-peace"></i></div>
     <div class="waitingwip">{{'wip' | translate}}</div>
     <div class="titleSlide titleResponsive titleproducts">{{'projects' | translate}}</div>
   </div>
   <div class="slide deepblue" id="linkAbout">
-    <div class="relative">
-    <div>
-      <a href="#"><i class="fa-solid fa-circle-up backTop"></i></a>
-    </div>
-    <div class="pacmanLine H1"></div>
-    <div class="pacmanLine H2"></div>
-    <div class="ghost aGhost"><i class="fa-solid fa-ghost"></i></div>
-    <div class="ghost bGhost"><i class="fa-solid fa-ghost"></i></div>
-    <div class="ghost cGhost"><i class="fa-solid fa-ghost"></i></div>
-    <div class="ghost dGhost"><i class="fa-solid fa-ghost"></i></div>
-    <div class="ghost eGhost"><i class="fa-solid fa-ghost"></i></div>
-    <div class="borderPhoto">
-      <div class="titleSlide titleResponsive titleAbout">{{'about' | translate}}</div>
-      <div class="photoProfile"></div>
-    </div>
-    <div class="aboutContent">
+    <div class="relative" (click)="handleGhostClick($event)">
+      <div>
+        <a href="#" class="backTop"><i class="fa-solid fa-circle-up"></i></a>
+      </div>
+      <div class="ghost aGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
+      <div class="ghost bGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
+      <div class="ghost cGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
+      <div class="ghost dGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
+      <div class="ghost eGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
+      <div class="borderPhoto">
+        <div class="titleSlide titleResponsive titleAbout">{{'about' | translate}}</div>
+        <div class="photoProfile"></div>
+      </div>
+      <div class="aboutContent">
         <button class="aboutButton">Experiences professionelles</button>
         <button class="aboutButton">Vision du métier</button>
         <button class="aboutButton">way of life</button>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 

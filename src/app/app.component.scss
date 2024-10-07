@@ -151,7 +151,7 @@
 
 .aboutButton:hover {
   width: 20vw;
-  height: 45vh;
+  height: 30vh;
   color: #fff5e8;
   font-family: LeagueSpartan;
   text-align: center;
@@ -168,25 +168,8 @@
 
 .relative {
   position: relative;
-}
-
-.pacmanLine {
-  border: 1px solid #0e374f;
-  background-color: #333d50;
-}
-
-.H1 {
-  top: 4.5vh;
-  position: absolute;
-  height: 2.5em;
-  width: 100vw;
-}
-
-.H2 {
-  top: 39.5vh;
-  position: absolute;
-  height: 2.5em;
-  width: 100vw;
+  cursor: url('../assets/images/cursor/pacmanCursor.png'), auto;
+  transition: cursor 0.3s ease; /* Optionnel : transition fluide */
 }
 
 .ghost {
@@ -194,12 +177,23 @@
   animation: all 14s infinite;
   font-size: 2em;
   z-index: 0;
+  padding: 10px; /* Ajoute un padding pour agrandir la zone cliquable */
+}
+
+.ghost:active {
+  transform: scale(0.9); /* Réduit légèrement la taille pour l'effet de clic */
+  transition: transform 0.1s; /* Transition fluide */
+}
+
+.ghost:hover {
+  transform: scale(1.1); /* Augmente légèrement la taille au survol */
+  transition: transform 0.2s; /* Transition fluide */
 }
 
 .cGhost {
 top:60vh;
 color: #92414d;
- animation: ghost-c-animation 10s ease-in-out infinite;
+ animation: ghost-c-animation 15s infinite;
 
 }
 
@@ -211,10 +205,10 @@ right: 100vw;
 
 @keyframes ghost-c-animation {
   0% {
-    left: -5vw; /* Départ à gauche du parent */
+    left: -5vw;
   }
   20% {
-    left: 20vw; /* Va jusqu'au bord droit du viewport */
+    left: 20vw;
      top: 60vh;
   }
   40% {
@@ -224,24 +218,24 @@ right: 100vw;
   }
   100% {
     top: 40vh;
-    left: 100vw; /* Retourne à gauche du parent */
+    left: 100vw;
   }
 }
 
 .aGhost {
-  top: 5vh;
+  top: 3vh;
   left: -5vw;
   color:#ffb370;
-  animation: ghost-a-animation 14s infinite;
+  animation: ghost-a-animation 20s infinite;
 }
 
 @keyframes ghost-a-animation {
   0% {
-    left: -5vw; /* Départ à gauche du parent */
+    left: -20vw;
   }
   20% {
-    left: 30vw; /* Va jusqu'au bord droit du viewport */
-     top: 5vh;
+    left: 30vw;
+     top: 3vh;
   }
   40% {
     top: 40vh;
@@ -250,7 +244,7 @@ right: 100vw;
   }
   100% {
     top: 40vh;
-    left: 120vw; /* Retourne à gauche du parent */
+    left: 120vw
   }
 }
 
@@ -258,13 +252,13 @@ right: 100vw;
   color:#f57959;
   top: 30vh;
   right: -5vw;
-  animation:  ghost-b-animation 12s infinite;
+  animation:  ghost-b-animation 13s infinite;
 }
 
 @keyframes ghost-b-animation {
   0% {
     top: 30vh;
-    right: -5vw; /* Départ à gauche du parent */
+    right: -5vw;
   }
   20% {
      top: 30vh;
@@ -277,32 +271,38 @@ right: 100vw;
   }
   100% {
     top: 50vh;
-    right: 120vw; /* Retourne à gauche du parent */
+    right: 120vw;
   }
 }
 
 .dGhost {
-  top: 80vh;
+  top: 10vh;
   color:#eb3f42;
-  animation:  move-left-right 12s infinite;
+  animation:  move-top-left 16s infinite;
   }
 
-@keyframes move-left-right {
+@keyframes move-top-left {
   0% {
-    left: -5vw; /* Départ à gauche du parent */
+    top: 10vh;
+    left: -5vw;
   }
-  50% {
-    left: 120vw; /* Va jusqu'au bord droit du viewport */
+  25% {
+    left: 5vw;
+  }
+  75% {
+    top: 85vh;
+    left: 5vw;
   }
   100% {
-    left: -5vw; /* Retourne à gauche du parent */
+    top: 85vh;
+    left: -5vw;
   }
 }
 .eGhost {
   top: -10vh;
   right: 15vw;
   color:#ffd4ac;
-  animation:  move-top-bottom 8s infinite;
+  animation:  move-top-bottom 15s infinite;
   }
 
 @keyframes move-top-bottom {
@@ -311,12 +311,12 @@ right: 100vw;
     right: 15vw;
   }
   50% {
-    top: 85vh;
+    top: 90vh;
     right: 15vw; /* Va jusqu'au bord droit du viewport */
   }
   100% {
     right: 110vw;
-    top: 85vh;
+    top: 90vh;
   }
 }
 
@@ -330,7 +330,7 @@ right: 100vw;
     font-size: 25px;
   }
   100% {
-    height: 45vh;
+    height: 30vh;
     border: 1px solid #ffb370;
     box-shadow: none;
     font-size: 30px;
