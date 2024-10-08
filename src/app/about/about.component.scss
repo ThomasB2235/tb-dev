@@ -293,5 +293,14 @@ right: 100vw;
     animation: none;
   }
 
+  .borderPhoto {
+    width: 85vw;
+    box-shadow: $yellow 0px 5px 25px;
+
+  }
+
+  .titleAbout {
+    font-size: x-large;
+  }
 
  }
