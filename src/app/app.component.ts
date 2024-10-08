@@ -32,9 +32,8 @@ export class AppComponent {
 
   isOriginalCursor = true;
   title = 'Thomas Bureller';
-
-   // Utilisation d'un tableau pour garder une trace de l'état des fantômes
-   ghosts: { id: string; exploded: boolean }[];
+  ghostCount = 0;
+  ghosts: { id: string; exploded: boolean }[];
 
   constructor(private translateService: TranslateService) {
     this.translateService.addLangs(['fr', 'en']);
@@ -75,6 +74,7 @@ explodeGhost(event: MouseEvent) {
 
   if (ghost && !ghost.exploded) {
     ghostElement.classList.add('explode');
+    this.ghostCount++;
     ghost.exploded = true;
     setTimeout(() => {
       ghostElement.remove();

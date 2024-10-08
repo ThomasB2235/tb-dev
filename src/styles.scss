@@ -8,7 +8,28 @@
   src: url('assets/fonts/MonotonRegular.ttf') format('truetype');
 }
 
-/* You can add global styles to this file, and also import other style files */
+// Color settings:
+
+$darkblue: #0e374f;
+$lightblue: #384358;
+$purple: #92414d;
+$red:#eb3f42;
+$orange: #f57959;
+$yellow: #ffb370;
+$lightyellow: #ffd4ac;
+$whiteyellow:#fff5e8;
+
+// Font-family:
+
+.ff, li, app-header {
+  font-family: LeagueSpartan;
+}
+
+// position: settings
+
+.prelative, nav {
+  position: relative;
+}
 
 html, body {
   height: 100%;
@@ -19,9 +40,8 @@ html, body {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #92414d;
+  background-color: $purple;
   overflow-x: hidden !important;
-
 }
 
 @keyframes slideInFromTop {
@@ -96,17 +116,15 @@ app-header {
   display: flex !important;
   flex-direction: column !important;
   font-size: small;
-  font-family: LeagueSpartan;
   color: rgb(194, 194, 194);
   animation: 1.5s ease-out 0s 1 slideInFromTop;
-  background-color: #0e374f;
+  background-color: $darkblue;
   background-image: url('assets/images/Curve_Line.svg');
   background-size: cover;
 }
 
 app-header section {
   display: flex !important;
-  flex-direction: row !important;
   justify-content: space-between;
   padding-left: 2vh;
   padding-right: 2vh;
@@ -125,8 +143,7 @@ li {
  }
 
 nav {
-  position: relative;
-  top: -80vh;
+  top: -20vh;
 }
 
 .linkNav{
@@ -155,14 +172,15 @@ nav {
   background-size: cover;
 }
 .redwine {
-  background-color: #92414d;
+  background-color: $purple;
 }
 .deepblue {
-  background-color: #384358;
+  background-color: $lightblue;
+  transition: background 0.6s ease;
 }
 
 .slide {
-  height: 100vh;
+  height: 110vh;
 }
 
 #mat-mdc-slide-toggle-1-label {
@@ -170,19 +188,7 @@ nav {
   color: rgb(194, 194, 194);
 }
 
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-a:active {
-  color: white;
+a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
@@ -191,7 +197,6 @@ a{
 }
 
 .backTop {
-  position: relative;
   margin-top: 2vh;
   margin-left: 49vw;
   color: rgba(194, 194, 194, 0.75);
@@ -200,23 +205,21 @@ a{
 }
 
 .backTop:hover {
-  position: relative;
   color: rgba(255, 255, 255, 1);
   font-size: xx-large;
   z-index: 1;
 }
 
 .skills {
-  background-color: #fff5e8;
+  background-color: $whiteyellow;
 }
 
 .titleSlide {
   font-size: 5em;
   margin-top: 8vh;
   text-align: center;
-  font-family: LeagueSpartan;
   font-weight: bold;
-  color: #92414d;
+  color: $purple;
 }
 
 /* smartphones, Android phones, portrait android */
@@ -230,7 +233,6 @@ a{
     font-size: 2em;
     margin-top: 5vh;
     text-align: center;
-    font-family: LeagueSpartan;
     font-weight: bolder;
     color: rgba(194, 194, 194, 1);
   }
@@ -240,16 +242,14 @@ a{
   }
 
   .titleResponsive {
-    color: #92414d,
+    color: $purple;
   }
 
   nav {
-    position: relative;
-    top: -65vh;
+    top: -20vh;
   }
 
   .backTop {
-    position: relative;
     margin-top: 2vh;
     right: 2vw;
     color: rgba(194, 194, 194, 0.75);
@@ -258,7 +258,6 @@ a{
 
   li {
     margin-top: 1vh;
-    font-family: LeagueSpartan;
     font-size: x-large;
     border-radius: 10px;
    }
@@ -280,7 +279,7 @@ a{
     font-family: LeagueSpartan;
     color: rgb(194, 194, 194);
     animation: 1.5s ease-out 0s 1 slideInFromTop;
-    background-color: #0e374f;
+    background-color: $darkblue;
     background-image: url('assets/images/Curve_Line_Mobile.svg');
     background-size: cover;
   }
@@ -293,16 +292,14 @@ a{
   }
 
   .container {
-    position: relative;
     max-height: 100%;
-    top: -50vh;
   }
 
   body {
     margin: 0;
     max-width: 100%;
     max-height: 100vh;
-    background-color: #92414d;
+    background-color: $purple;
     overflow-x: hidden !important;
   }
 
@@ -352,12 +349,6 @@ a{
    /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
 
-  .container {
-    position: relative;
-    max-height: 110%;
-    top: -57vh;
-  }
-
   .navSlide {
     height: 15vh;
     width: 15vw;
@@ -376,9 +367,7 @@ a{
   }
 
   .container {
-    position: relative;
     max-height: 100%;
-    top: -53vh;
   }
 
  }

@@ -1,10 +1,25 @@
+// Color settings:
+
+$darkblue: #0e374f;
+$lightblue: #384358;
+$purple: #92414d;
+$red:#eb3f42;
+$orange: #f57959;
+$yellow: #ffb370;
+$lightyellow: #ffd4ac;
+$whiteyellow:#fff5e8;
+
+// Flex settings :
+
+.jcsb {
+  justify-content: space-between;
+}
+
 .insidePage {
   height: 70vh;
   width: 80vw;
   margin:auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .knowledge {
@@ -16,8 +31,8 @@
 }
 
 .icon {
-  background-color: #92414d;
-  color: #fff5e8;
+  background-color: $purple;
+  color: $whiteyellow;
   width: 100px;
   height: 100px;
   line-height: 100px;
@@ -29,7 +44,6 @@
 .iconLogo {
   width: 15vw;
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -42,28 +56,28 @@
   font-size: larger;
   text-align: center;
   font-weight: bolder;
-  color: #384358;
+  color: $lightblue;
   font-family: LeagueSpartan;
 }
 
 .line {
   width: 15vw;
   height: 2px;
-  background-color: #92414d;
+  background-color: $purple;
   margin-bottom: 3vh;
 }
 
 .wip {
-  margin-top: 20vh;
+  padding-top: 10vh;
   text-align: center;
   font-size: 15em;
-  background: -webkit-linear-gradient(#92414d, #f57959);
+  background: -webkit-linear-gradient($purple, $orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .skillsBackground {
-  background: linear-gradient(300deg,#fff5e8,#ffd4ac,#ffb370);
+  background: linear-gradient(300deg,$whiteyellow,$lightyellow,$yellow);
   background-size: 180% 180%;
   animation: gradient-animation 10s ease infinite;
 }
@@ -73,17 +87,17 @@
 }
 
 .titleproducts {
-  color: #0e374f;
+  color: $darkblue;
 }
 
 .titleAbout {
-  color: #fff5e8;
+  color: $whiteyellow;
 }
 
 .waitingwip {
   margin-top: 10vh;
   font-size: 3em;
-  color: #0e374f;
+  color: $darkblue;
   text-align: center;
 }
 
@@ -95,11 +109,10 @@
   display: flex;
   top: 4vh;
   position: relative;
-  justify-content: space-between;
   padding-left: 10vw;
   padding-right: 0.5vw;
   align-items: center;
-  background: #0e374f;
+  background: $darkblue;
   border-top-right-radius: 110px;
   border-bottom-right-radius: 110px;
   box-shadow: rgba(0,0,0,0.7) 0px 5px 15px;
@@ -131,20 +144,17 @@
   position: relative;
   top: 15vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
 .aboutButton {
   width: 20vw;
   height: 20vh;
-  color: #fff5e8;
-  font-family: LeagueSpartan;
+  color: $whiteyellow;
   text-align: center;
   padding: auto;
-  background: #384358;
-  border: 1px solid #fff5e8;
+  background: $lightblue;
+  border: 1px solid $whiteyellow;
   font-size: 25px;
   box-shadow: black 0px 5px 15px;
 }
@@ -152,14 +162,13 @@
 .aboutButton:hover {
   width: 20vw;
   height: 30vh;
-  color: #fff5e8;
-  font-family: LeagueSpartan;
+  color: $whiteyellow;
   text-align: center;
   padding: auto;
-  background: #0e374f;
-  border: 5px solid #ffb370;
+  background: $darkblue;
+  border: 5px solid $yellow;
   font-size: 25px;
-  box-shadow: #ffb370 0px 5px 15px;
+  box-shadow: $yellow 0px 5px 15px;
   animation: size-animation 0.65s ease-in-out;
   font-size: 30px;
 }
@@ -169,7 +178,7 @@
 .relative {
   position: relative;
   cursor: url('../assets/images/cursor/pacmanCursor.png'), auto;
-  transition: cursor 0.3s ease; /* Optionnel : transition fluide */
+  transition: cursor 0.3s ease;
 }
 
 .ghost {
@@ -177,22 +186,22 @@
   animation: all 14s infinite;
   font-size: 2em;
   z-index: 0;
-  padding: 10px; /* Ajoute un padding pour agrandir la zone cliquable */
+  padding: 10px;
 }
 
 .ghost:active {
-  transform: scale(0.9); /* Réduit légèrement la taille pour l'effet de clic */
-  transition: transform 0.1s; /* Transition fluide */
+  transform: scale(0.9);
+  transition: transform 0.1s;
 }
 
 .ghost:hover {
-  transform: scale(1.1); /* Augmente légèrement la taille au survol */
-  transition: transform 0.2s; /* Transition fluide */
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 .cGhost {
 top:60vh;
-color: #92414d;
+color: $purple;
  animation: ghost-c-animation 15s infinite;
 
 }
@@ -225,7 +234,7 @@ right: 100vw;
 .aGhost {
   top: 3vh;
   left: -5vw;
-  color:#ffb370;
+  color:$yellow;
   animation: ghost-a-animation 20s infinite;
 }
 
@@ -249,7 +258,7 @@ right: 100vw;
 }
 
 .bGhost {
-  color:#f57959;
+  color:$orange;
   top: 30vh;
   right: -5vw;
   animation:  ghost-b-animation 13s infinite;
@@ -257,16 +266,16 @@ right: 100vw;
 
 @keyframes ghost-b-animation {
   0% {
-    top: 30vh;
+    top: 5vh;
     right: -5vw;
   }
-  20% {
-     top: 30vh;
-     right: 30vw;
+  10% {
+     top: 5vh;
+     right: 10vw;
   }
-  30% {
+  40% {
     top: 50vh;
-    right: 30vw;
+    right: 10vw;
 
   }
   100% {
@@ -277,7 +286,7 @@ right: 100vw;
 
 .dGhost {
   top: 10vh;
-  color:#eb3f42;
+  color: $red;
   animation:  move-top-left 16s infinite;
   }
 
@@ -301,7 +310,7 @@ right: 100vw;
 .eGhost {
   top: -10vh;
   right: 15vw;
-  color:#ffd4ac;
+  color:$lightyellow;
   animation:  move-top-bottom 15s infinite;
   }
 
@@ -326,12 +335,12 @@ right: 100vw;
     height: 20vh;
     border: 1px solid #e47171;
     box-shadow: none;
-    background-color: #384358;
+    background-color: $lightblue;
     font-size: 25px;
   }
   100% {
     height: 30vh;
-    border: 1px solid #ffb370;
+    border: 1px solid $yellow;
     box-shadow: none;
     font-size: 30px;
   }
@@ -386,7 +395,6 @@ right: 100vw;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .iconLogo {
@@ -397,8 +405,8 @@ right: 100vw;
   }
 
   .icon {
-    background-color: #92414d;
-    color: #fff5e8;
+    background-color: $purple;
+    color: $whiteyellow;
     width: 100px;
     height: 100px;
     line-height: 100px;
@@ -416,7 +424,7 @@ right: 100vw;
     display: none;
     width: 100vw;
     height: 2px;
-    background-color: #92414d;
+    background-color: $purple;
     margin-bottom: 3vh;
   }
 
@@ -425,7 +433,7 @@ right: 100vw;
   }
 
   .titleproducts {
-    color: #0e374f;
+    color: $darkblue;
     position: relative;
     top: -55vh;
   }
