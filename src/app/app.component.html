@@ -1,93 +1,9 @@
 <app-header></app-header>
 
 <div class="container">
-  <div class="slide skills skillsBackground" id="linkSkills">
-    <!-- <div class="backTop prelative">
-      <a href="#"><i class="fa-solid fa-circle-up"></i></a>
-    </div> -->
-    <div class="insidePage jcsb">
-      <div class="knowledge jcsb front">
-        <div class="iconLogo">
-          <div class="icon"><i class="fa-solid fa-display"></i></div>
-        </div>
-        <div class="textContent">
-          <h2>Front-End</h2>
-          <div class="line"></div>
-          <p>Angular</p>
-          <p>Angular Material</p>
-          <p>Semantic UI</p>
-          <p>Responsive Webdesign</p>
-          <p>WCAG</p>
-        </div>
-      </div>
-      <div class="knowledge jcsb back">
-        <div class="iconLogo">
-          <div class="icon"><i class="fa-solid fa-floppy-disk"></i></div>
-        </div>
-        <div class="textContent">
-          <h2>Back-End</h2>
-          <div class="line"></div>
-          <p>NodeJS</p>
-          <p>NestJS</p>
-          <p>LoopBack</p>
-          <p>RestAPI</p>
-          <p>Postman</p>
-        </div>
-      </div>
-      <div class="knowledge jcsb database">
-        <div class="iconLogo">
-          <div class="icon"><i class="fa-solid fa-database"></i></div>
-        </div>
-        <div class="textContent">
-          <h2>{{'database' | translate}}</h2>
-          <div class="line"></div>
-          <p>PostGreSQL</p>
-          <p>SQLServer</p>
-          <p>MongoDB</p>
-          <p>Compass</p>
-          <p>DBeaver</p>
-        </div>
-      </div>
-      <div class="knowledge jcsb devops">
-        <div class="iconLogo">
-          <div class="icon"><i class="fa-solid fa-code"></i></div>
-        </div>
-        <div class="textContent">
-          <h2>DevOps</h2>
-          <div class="line"></div>
-          <p>Jenkins</p>
-          <p>Azure Devops</p>
-          <p>Ansible</p>
-          <p>Linux</p>
-          <p>Git</p>
-        </div>
-      </div>
-    </div>
-    <div class="titleSlide ff titleResponsive titleSkills">{{'skills' | translate}}</div>
-  </div>
-  <div class="slide orange" id="linkProjects">
-    <div class="wip"><i class="fa-solid fa-peace"></i></div>
-    <div class="waitingwip">{{'wip' | translate}}</div>
-    <div class="titleSlide ff titleResponsive titleproducts">{{'projects' | translate}}</div>
-  </div>
-  <div class="slide deepblue" id="linkAbout">
-    <div class="relative" (click)="handleGhostClick($event)">
-      <div class="ghost aGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-      <div class="ghost bGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-      <div class="ghost cGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-      <div class="ghost dGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-      <div class="ghost eGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-      <div class="borderPhoto jcsb">
-        <div class="titleSlide ff titleResponsive titleAbout">{{'about' | translate}}</div>
-        <div class="photoProfile"></div>
-      </div>
-      <div class="aboutContent jcsb">
-        <button class="aboutButton ff">Experiences professionelles</button>
-        <button class="aboutButton ff">Vision du métier</button>
-        <button class="aboutButton ff">way of life</button>
-      </div>
-    </div>
-  </div>
+  <app-skills></app-skills>
+  <app-products></app-products>
+  <app-about></app-about>
 </div>
 
 <app-footer></app-footer>

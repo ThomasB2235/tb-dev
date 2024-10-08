@@ -1,0 +1,38 @@
+@import '../../colors';
+
+.wip {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 15em;
+  background: -webkit-linear-gradient($purple, $orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.waitingwip {
+  margin-top: 10vh;
+  font-size: 3em;
+  color: $darkblue;
+  text-align: center;
+}
+
+
+.titleproducts {
+  color: $darkblue;
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:300px) and (max-width:599px)  {
+
+  .waitingwip {
+    font-size: 3vh;;
+  }
+
+  .titleproducts {
+    color: $darkblue;
+    position: relative;
+    top: -55vh;
+  }
+
+}

@@ -1,0 +1,114 @@
+@import '../../colors';
+
+.skillsBackground {
+  background: linear-gradient(300deg,$whiteyellow,$lightyellow,$yellow);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.textContent {
+  height: 50vh;
+  width: 15vw;
+}
+
+.textContent, h2 {
+  font-size: larger;
+  text-align: center;
+  font-weight: bolder;
+  color: $lightblue;
+  font-family: LeagueSpartan;
+}
+
+.insidePage {
+  height: 70vh;
+  width: 80vw;
+  margin:auto;
+  display: flex;
+}
+
+.knowledge {
+  margin-top: 2vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon {
+  background-color: $purple;
+  color: $whiteyellow;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: xx-large;
+}
+
+.iconLogo {
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+}
+
+
+.line {
+  width: 15vw;
+  height: 2px;
+  background-color: $purple;
+  margin-bottom: 3vh;
+}
+
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:300px) and (max-width:599px)  {
+
+  .insidePage {
+    height: 100vh;
+    width: 100vw;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .line {
+    display: none;
+    width: 100vw;
+    height: 2px;
+    background-color: $purple;
+    margin-bottom: 3vh;
+  }
+
+  .knowledge {
+    margin-top: 2vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textContent {
+    height: 30vh;
+    width: 100vw;
+  }
+
+
+
+.iconLogo {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  background-color: $purple;
+  color: $whiteyellow;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: xx-large;
+}
+
+}
