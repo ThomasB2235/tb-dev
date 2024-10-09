@@ -24,14 +24,14 @@ export class AboutComponent {
   }
     @HostListener('mousedown', ['$event'])
     onMouseDown(event: MouseEvent) {
-      const divElement = document.querySelector('.relative') as HTMLElement;
+      const divElement = document.querySelector('.pacmanPlayground') as HTMLElement;
       // Change le curseur pendant le clic
       divElement.style.cursor = "url('/assets/images/cursor/pacmanCursorClick.png'), auto";
     }
 
     @HostListener('mouseup', ['$event'])
     onMouseUp(event: MouseEvent) {
-      const divElement = document.querySelector('.relative') as HTMLElement;
+      const divElement = document.querySelector('.pacmanPlayground') as HTMLElement;
       // Remet le curseur à son état initial après le clic
       divElement.style.cursor = "url('/assets/images/cursor/pacmanCursor.png'), auto";
     }

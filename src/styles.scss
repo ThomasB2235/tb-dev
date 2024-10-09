@@ -22,6 +22,13 @@
   position: relative;
 }
 
+// Flex settings :
+
+.jcsb {
+  justify-content: space-between;
+}
+
+
 html, body {
   height: 100%;
   scroll-behavior: smooth;
@@ -167,7 +174,6 @@ nav {
 }
 .deepblue {
   background-color: $lightblue;
-  transition: background 0.6s ease;
 }
 
 .slide {
@@ -188,7 +194,7 @@ a{
 }
 
 .backTop {
-  margin-top: 2vh;
+  padding-top: 2vh;
   margin-left: 49vw;
   color: rgba(194, 194, 194, 0.75);
   font-size: xx-large;
@@ -238,13 +244,6 @@ a{
 
   nav {
     top: -20vh;
-  }
-
-  .backTop {
-    margin-top: 2vh;
-    right: 2vw;
-    color: rgba(194, 194, 194, 0.75);
-    font-size: xx-large;
   }
 
   li {

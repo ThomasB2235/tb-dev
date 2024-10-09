@@ -2,7 +2,7 @@
   <div class="backTop prelative">
     <a href="#"><i class="fa-solid fa-circle-up"></i></a>
   </div>
-  <div class="relative" (click)="handleGhostClick($event)">
+  <div class="pacmanPlayground" (click)="handleGhostClick($event)">
     <div class="ghost aGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
     <div class="ghost bGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
     <div class="ghost cGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
@@ -13,9 +13,9 @@
       <div class="photoProfile"></div>
     </div>
     <div class="aboutContent jcsb">
-      <button class="aboutButton ff">Experiences professionelles</button>
-      <button class="aboutButton ff">Vision du métier</button>
-      <button class="aboutButton ff">way of life</button>
+      <button class="aboutButton ff">{{'developCareer' | translate}}</button>
+      <button class="aboutButton ff">{{'otherExp' | translate}}</button>
+      <button class="aboutButton ff">{{'learnMore' | translate}}...</button>
     </div>
   </div>
 </div>

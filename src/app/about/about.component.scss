@@ -61,30 +61,56 @@
   color: $whiteyellow;
   text-align: center;
   padding: auto;
-  background: $lightblue;
+  background: $darkblue;
   border: 1px solid $whiteyellow;
-  font-size: 25px;
+  font-size: 22px;
   box-shadow: black 0px 5px 15px;
 }
 
 .aboutButton:hover {
   width: 20vw;
-  height: 30vh;
+  height: 20vh;
   color: $whiteyellow;
   text-align: center;
   padding: auto;
-  background: $darkblue;
-  border: 5px solid $yellow;
+  background: linear-gradient($purple, $lightblue);
+    border: 5px solid $yellow;
   font-size: 25px;
   box-shadow: $yellow 0px 5px 15px;
-  animation: size-animation 0.65s ease-in-out;
-  font-size: 30px;
 }
 
 // Pacman Content
 
-.relative {
+.segment {
+  border: 1px solid rgb(19, 204, 236);
+  border-radius: 5px;
+}
+
+.height2 {
+  height: 2vh;
+}
+
+.s1 {
+   top: 38vh;
+   left: 8vw;
+   width: 22vw;
+}
+
+.s2 {
+  top: 36vh;
+  left: 33vw;
+  width: 48.5vw;
+}
+
+.s3 {
+  top: 34vh;
+  left: 84vw;
+  width: 5vw;
+}
+
+.pacmanPlayground {
   position: relative;
+  height:90vh !important;
   cursor: url('../../assets/images/cursor/pacmanCursor.png'), auto;
   transition: cursor 0.3s ease;
 }
@@ -238,24 +264,6 @@ right: 100vw;
   }
 }
 
-
-@keyframes size-animation {
-  0% {
-    height: 20vh;
-    border: 1px solid #e47171;
-    box-shadow: none;
-    background-color: $lightblue;
-    font-size: 25px;
-  }
-  100% {
-    height: 30vh;
-    border: 1px solid $yellow;
-    box-shadow: none;
-    font-size: 30px;
-  }
-}
-
-
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -294,9 +302,7 @@ right: 100vw;
   }
 
   .borderPhoto {
-    width: 85vw;
-    box-shadow: $yellow 0px 5px 25px;
-
+    width: 80vw;
   }
 
   .titleAbout {

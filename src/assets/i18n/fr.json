@@ -1,6 +1,6 @@
 {
   "home":"Accueil",
-  "about":"A propos",
+  "about":"À propos",
   "share":"partager",
   "info":"Informations sur la chaîne",
   "name":"Noms",
@@ -13,6 +13,9 @@
   "follow": "Suivez-moi sur",
   "developer": "Développeur Full Stack",
   "projects": "Mes projets",
-  "database": "Base de données"
+  "database": "Base de données",
+  "developCareer": "Mon parcours de développeur",
+  "otherExp": "Autres expériences professionelles",
+  "learnMore": "En savoir plus"
 
 }
