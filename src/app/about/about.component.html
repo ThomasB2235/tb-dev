@@ -13,9 +13,9 @@
       <div class="photoProfile"></div>
     </div>
     <div class="aboutContent jcsb">
-      <button class="aboutButton ff">{{'developCareer' | translate}}</button>
-      <button class="aboutButton ff">{{'otherExp' | translate}}</button>
-      <button class="aboutButton ff">{{'learnMore' | translate}}...</button>
+      <button class="aboutButton ff" (click)="openDialog('developCareer')">{{'developCareer' | translate}}</button>
+      <button class="aboutButton ff" (click)="openDialog('otherExp')">{{'otherExp' | translate}}</button>
+      <button class="aboutButton ff" (click)="openDialog('learnMore')">{{'learnMore' | translate}}...</button>
     </div>
   </div>
 </div>

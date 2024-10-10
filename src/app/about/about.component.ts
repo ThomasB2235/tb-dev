@@ -1,16 +1,19 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, MatDialogModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
   ghostCount = 0;
   ghosts: { id: string; exploded: boolean }[];
+  readonly dialog = inject(MatDialog);
 
   constructor() {
     this.ghosts = [
@@ -21,6 +24,20 @@ export class AboutComponent {
       { id: 'eGhost', exploded: false },
     ];
   }
+
+
+  openDialog(content: string) {
+    const dialogRef = this.dialog.open(DialogDataComponent, {
+      maxWidth: 'none',
+      data: {
+        title: content
+      },
+    });
+
+    dialogRef.afterClosed();
+
+  }
+
   @HostListener('mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     const divElement = document.querySelector(

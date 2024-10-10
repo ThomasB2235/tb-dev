@@ -1,0 +1,21 @@
+@import '../../colors';
+
+@font-face {
+  font-family: LeagueSpartan;
+  src: url('../../assets/fonts/LeagueSpartan.ttf') format('truetype');
+}
+
+.popup {
+  width: 80vw;
+  height: 80vh;
+  background-color: $whiteyellow;
+}
+
+:host ::ng-deep h2 {
+  font-family: LeagueSpartan !important;
+  background-color: $lightblue;
+  color: $whiteyellow !important;
+  font-size: large;
+  border-bottom: 5px solid $purple;
+}
+
