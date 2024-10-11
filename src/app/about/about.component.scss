@@ -70,13 +70,12 @@
 .aboutButton:hover {
   width: 20vw;
   height: 20vh;
-  color: $whiteyellow;
   text-align: center;
   padding: auto;
   background: linear-gradient($purple, $lightblue);
-    border: 5px solid $yellow;
+    border: 5px solid $whiteyellow;
   font-size: 25px;
-  box-shadow: $yellow 0px 5px 15px;
+  box-shadow: $whiteyellow 0px 5px 15px;
 }
 
 // Pacman Content
