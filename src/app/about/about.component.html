@@ -8,13 +8,13 @@
     <div class="ghost cGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
     <div class="ghost dGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
     <div class="ghost eGhost" (click)="explodeGhost($event)"><i class="fa-solid fa-ghost"></i></div>
-    <div class="borderPhoto jcsb">
+    <div class="borderPhoto jcsb" #aboutSection>
       <div class="titleSlide ff titleResponsive titleAbout">{{'about' | translate}}</div>
       <div class="photoProfile"></div>
     </div>
     <div class="aboutContent">
-      <button class="aboutButton ff" (click)="openDialog('developCareer')">{{'developCareer' | translate}}</button>
-      <button class="aboutButton ff" (click)="openDialog('learnMore')">{{'learnMore' | translate}}...</button>
+      <button class="aboutButton ff" #aboutButton (click)="openDialog('developCareer')">{{'developCareer' | translate}}</button>
+      <button class="aboutButton ff" #aboutButton (click)="openDialog('learnMore')">{{'learnMore' | translate}}...</button>
     </div>
   </div>
 </div>

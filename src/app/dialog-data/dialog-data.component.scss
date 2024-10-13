@@ -28,3 +28,21 @@ li {
   font-family: LeagueSpartan;
   font-size: medium;
 }
+
+.floatLeft {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding-right: 2vw;
+}
+.floatRigth {
+  float: right;
+  width: 100px;
+  height: 100px;
+  padding-left: 2vw;
+}
+
+.margintop {
+  margin-top: 5vh;
+}
+

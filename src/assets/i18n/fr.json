@@ -14,8 +14,18 @@
   "developer": "Développeur Full Stack",
   "projects": "Mes projets",
   "database": "Base de données",
-  "developCareer": "Mon parcours professionel",
+  "developCareer": "Mon parcours professionnel",
   "otherExp": "Autres expériences professionelles",
-  "learnMore": "En savoir plus"
-
+  "learnMore": "En savoir plus",
+  "homeDevFormTitle": "Une reconversion professionelle à la maison",
+  "homeDevFirst": "Après plus de dix ans dans le domaine paramédical, et une intense envie de travailler dans l'informatique, j'ai décidé de me lancer dans une formation diplomante de développeur web et web mobile.",
+  "homeDevSecond": "Six mois de formation à la maison grâce l'ENI (école nationale d'informatique), suivi de deux mois de stage chez Accenture, me voilà diplomé et embauché au sein de ce cabinet de conseil.",
+  "accentureTitle": "Première experience en télétravail pour développer mes compétences",
+  "accentureFirst": "L'expérience par la pratique, rien de tel pour forger mes compétences. Mes differents projets m'ont permis de solidifier mes compétences, d'en acquérir de nouvelles. Après plusieurs années, le syndrome de l'imposteur est enfin disparu.",
+  "accentureSecond": "Lors de cette première expérience, je suis passé sur plusieurs projets",
+  "accentureli1": "Un projet from scratch.",
+  "accentureli2": "L'intégration de POE.",
+  "accentureli3": "Un projet existant, avec une logique métier complexe.",
+  "accentureThird": "Grâce a ces expériences, je suis en mesure de répondre aux demandes front, Back, devOps, et l'envie de développer mes connaissances chaque jour.",
+  "accentureFourth": "Une chose est certaine, plus le temps passe, plus ce métier m'épanouî. Un apprentissage infini s'ouvre devant moi, je code sur mon temps libre. Bref, j'ai trouvé un équilibre entre ma vie professionelle et personnelle. "
 }

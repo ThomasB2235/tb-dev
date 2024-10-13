@@ -67,6 +67,14 @@
   border: 1px solid $whiteyellow;
   font-size: 22px;
   box-shadow: black 0px 5px 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.aboutButton.in-view-buttons {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .aboutButton:hover {
@@ -138,7 +146,6 @@
 top:60vh;
 color: $purple;
  animation: ghost-c-animation 15s infinite;
-
 }
 
 @keyframes ghost-animation {
@@ -276,6 +283,29 @@ right: 100vw;
     background-position: 0% 50%;
   }
 }
+
+.in-view {
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes borderEffectInVp {
+  0% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.aboutButton.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width:300px) and (max-width:599px)  {
