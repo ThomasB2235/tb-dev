@@ -31,12 +31,10 @@ export class AboutComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Vérifie que l'élément est défini avant de l'observer
     if (this.aboutSection) {
       const observer: IntersectionObserver = new IntersectionObserver(
         (entries: IntersectionObserverEntry[]): void => {
           entries.forEach((entry: IntersectionObserverEntry): void => {
-            // Vérifie si l'élément est visible dans le viewport
             if (entry.isIntersecting) {
               entry.target.classList.add('in-view');
               observer.unobserve(entry.target);
@@ -44,11 +42,10 @@ export class AboutComponent implements AfterViewInit {
           });
         },
         {
-          threshold: 0.1, // Déclenche l'animation quand 10% de l'élément est visible
+          threshold: 0.1,
         }
       );
 
-      // Observe l'élément ciblé par ViewChild
       observer.observe(this.aboutSection.nativeElement);
     }
 
@@ -58,7 +55,7 @@ export class AboutComponent implements AfterViewInit {
           entries.forEach((entry: IntersectionObserverEntry): void => {
             if (entry.isIntersecting) {
               (entry.target as HTMLElement).classList.add('in-view-buttons');
-              observer.unobserve(entry.target); // Stop observing to avoid repeating animations
+              observer.unobserve(entry.target);
             }
           });
         },
@@ -67,7 +64,6 @@ export class AboutComponent implements AfterViewInit {
         }
       );
 
-      // Observe each button element
       this.aboutButtons.forEach(button => {
         observer.observe(button.nativeElement);
       });
@@ -104,7 +100,6 @@ export class AboutComponent implements AfterViewInit {
       "url('/assets/images/cursor/pacmanCursor.png'), auto";
   }
 
-  // Méthode qui applique l'explosion à la div cliquée
   explodeGhost(event: MouseEvent) {
     const ghostElement = event.currentTarget as HTMLElement;
 
@@ -113,7 +108,6 @@ export class AboutComponent implements AfterViewInit {
 
     if (ghost && !ghost.exploded) {
       ghostElement.classList.add('explode');
-      this.ghostCount++;
       ghost.exploded = true;
       setTimeout(() => {
         ghostElement.remove();
