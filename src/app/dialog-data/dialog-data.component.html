@@ -23,5 +23,19 @@
         <p>{{'accentureFourth' | translate}}</p>
       </div>
     </div>
+    <div *ngIf="data.title === 'learnMore'" class="jcfc">
+      <div>
+      <img class="floatLeftBigger" src="/assets/images/podo.png" alt="cabinet de podologue"/>
+      <h3>{{'learnMoreFirstTitle' | translate}}</h3>
+      <p>{{'learnMoreFirstP' | translate}}</p>
+      <p>{{'learnMoreSecondP' | translate}}</p>
+    </div>
+    <div class="margintop">
+      <img class="floatRigthBigger" src="/assets/images/pharmacie.png" alt="pharmacie"/>
+      <h3>{{'learnMoreSecondTitle' | translate}}</h3>
+      <p>{{'learnMoreThirdP' | translate}}</p>
+      <p>{{'learnMoreFourthP' | translate}}</p>
+    </div>
+    </div>
   </mat-dialog-content>
 </div>

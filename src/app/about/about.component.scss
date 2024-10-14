@@ -66,7 +66,7 @@
   box-shadow: black 0px 5px 15px;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 2s ease-out, transform 2s ease-out;
+  transition: opacity 3s ease-out, transform 1s ease-out;
 }
 
 .aboutButton.in-view-buttons {
@@ -80,7 +80,7 @@
   text-align: center;
   padding: auto;
   background: linear-gradient($purple, $lightblue);
-    border: 5px solid $whiteyellow;
+  border: 5px solid $whiteyellow;
   font-size: 25px;
   box-shadow: $whiteyellow 0px 5px 15px;
 }
@@ -251,7 +251,7 @@ right: 100vw;
   top: -10vh;
   right: 15vw;
   color:$lightyellow;
-  animation:  move-top-bottom 15s infinite;
+  animation: move-top-bottom 15s infinite;
   }
 
 @keyframes move-top-bottom {
@@ -283,18 +283,6 @@ right: 100vw;
 
 .in-view {
   animation: 1.5s ease-out 0s 1 slideInFromLeft;
-}
-
-@keyframes borderEffectInVp {
-  0% {
-    transform: translateX(-100%);
-  }
-  70% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .aboutButton.in-view {

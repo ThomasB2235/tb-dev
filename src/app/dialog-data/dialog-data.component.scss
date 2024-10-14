@@ -35,6 +35,19 @@ li {
   height: 100px;
   padding-right: 2vw;
 }
+
+.floatLeftBigger {
+  width: 200px;
+  height: 200px;
+  padding-right: 2vw;
+  float: left;
+}
+
+.jcfc {
+  display: flex;
+  flex-direction: column;
+}
+
 .floatRigth {
   float: right;
   width: 100px;
@@ -42,7 +55,33 @@ li {
   padding-left: 2vw;
 }
 
+.floatRigthBigger {
+  float: right;
+  width: 200px;
+  height: 200px;
+  padding-left: 2vw;
+}
+
 .margintop {
   margin-top: 5vh;
 }
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:300px) and (max-width:599px)  {
+
+  .floatRigthBigger {
+    float: right;
+    width: 100px;
+    height: 100px;
+    padding-left: 2vw;
+  }
+
+  .floatLeftBigger {
+    width: 100px;
+    height: 100px;
+    padding-right: 2vw;
+    float: left;
+  }
+
+ }
 
