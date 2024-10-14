@@ -4,7 +4,7 @@
   padding-top: 10vh;
   text-align: center;
   font-size: 15em;
-  background: -webkit-linear-gradient($purple, $orange);
+  background: -webkit-linear-gradient($orange, $lightyellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -13,13 +13,17 @@
 .waitingwip {
   margin-top: 10vh;
   font-size: 3em;
-  color: $darkblue;
+  color: $whiteyellow;
   text-align: center;
+}
+
+.backgroundProducts {
+  background-color: $purple;
 }
 
 
 .titleproducts {
-  color: $darkblue;
+  color: $whiteyellow;
 }
 
 /* smartphones, Android phones, landscape iPhone */
