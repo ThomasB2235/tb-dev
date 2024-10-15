@@ -145,6 +145,7 @@ nav {
 }
 
 .linkNav{
+  font-size: x-large;
   display: block;
   height: 14vh;
   width: 14vw;
@@ -403,4 +404,15 @@ a{
     right: 4vw;
     width: 5vw;
     animation: none;
-  }}
+  }
+}
+
+   /* hi-res laptops and desktops */
+   @media (min-width:1281px) {
+    .linkNav{
+      font-size: xx-large;
+      display: block;
+      height: 14vh;
+      width: 14vw;
+    }
+   }

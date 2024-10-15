@@ -5,11 +5,11 @@ h1, h2 {
 
 h2 {
   font-weight: bolder;
-  font-size: 10vh;
+  font-size: 8vh;
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 4vh;
   font-weight: lighter;
 }
 
@@ -75,3 +75,17 @@ section> .mat-slide-toggle.mat-disabled {
     top: -10vh;
   }
 }
+
+
+   /* hi-res laptops and desktops */
+   @media (min-width:1281px) {
+    h2 {
+      font-weight: bolder;
+      font-size: 10vh;
+    }
+
+    h1 {
+      font-size: 5vh;
+      font-weight: lighter;
+    }
+   }
