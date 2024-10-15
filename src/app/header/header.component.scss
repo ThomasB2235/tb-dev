@@ -37,6 +37,7 @@ section> .mat-slide-toggle.mat-disabled {
   opacity: 1 !important;
 }
 
+
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width:300px) and (max-width:599px)  {
   h2 {
@@ -56,3 +57,21 @@ section> .mat-slide-toggle.mat-disabled {
   }
 
  }
+
+ @media screen and (orientation: portrait) {
+  h2 {
+    font-weight: bolder;
+    font-size: 4vh;
+  }
+
+  h1 {
+    font-size: 4vh;
+    font-weight: lighter;
+  }
+
+  .homePageTitle {
+    position: relative;
+    margin: auto;
+    top: -10vh;
+  }
+}

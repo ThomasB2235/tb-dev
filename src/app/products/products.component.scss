@@ -21,6 +21,24 @@
   background-color: $purple;
 }
 
+.contentProject {
+  width: 100vw;
+  height: 75vh;
+  border-bottom: 2px solid $whiteyellow;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.website {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px -30px 50px, rgba(0, 0, 0, 0.12) 0px 40px 60px, rgba(0, 0, 0, 0.09) 0px -30px 50px;
+  width: 20vw;
+  height: 50vh;
+  border-top: 1px solid $whiteyellow;
+  border-left: 1px solid $whiteyellow;
+  border-right: 1px solid $whiteyellow;
+}
+
 
 .titleproducts {
   color: $whiteyellow;
