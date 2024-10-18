@@ -12,13 +12,16 @@
 
 // Font-family:
 
-.ff, li, app-header {
+.ff,
+li,
+app-header {
   font-family: LeagueSpartan;
 }
 
 // position: settings
 
-.prelative, nav {
+.prelative,
+nav {
   position: relative;
 }
 
@@ -29,11 +32,12 @@
 }
 
 
-html, body {
+html,
+body {
   height: 100%;
   scroll-behavior: smooth;
   font-family: LeagueSpartan;
- }
+}
 
 body {
   margin: 0;
@@ -46,6 +50,7 @@ body {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -55,9 +60,11 @@ body {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -67,9 +74,11 @@ body {
   0% {
     transform: translateX(110%);
   }
+
   70% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -79,9 +88,11 @@ body {
   0% {
     transform: translateX(-100%);
   }
+
   70% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -130,21 +141,21 @@ app-header section {
 }
 
 ol {
- list-style-type: none !important;
- padding-inline-start: 0px;
+  list-style-type: none !important;
+  padding-inline-start: 0px;
 }
 
 li {
   margin-top: 1vh;
   font-family: LeagueSpartan;
   font-size: xx-large;
- }
+}
 
 nav {
   top: -20vh;
 }
 
-.linkNav{
+.linkNav {
   font-size: x-large;
   display: block;
   height: 14vh;
@@ -167,14 +178,22 @@ nav {
 }
 
 .orange {
-  background-image: url('assets/images/Mass_Circles.svg');
+  background-color: $yellow;
   background-size: cover;
+  color: $purple;
 }
+
 .redwine {
   background-color: $purple;
 }
+
 .deepblue {
   background-color: $lightblue;
+}
+
+.deepbluetitle {
+  background-color: $lightblue;
+  color: $yellow;
 }
 
 .slide {
@@ -186,12 +205,15 @@ nav {
   color: rgb(194, 194, 194);
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
 }
 
-a{
-  color:inherit;
+a {
+  color: inherit;
 }
 
 .backTop {
@@ -221,7 +243,7 @@ a{
 }
 
 /* smartphones, Android phones, portrait android */
-@media (min-width:300px) and (max-width:599px)  {
+@media (min-width:300px) and (max-width:599px) {
 
   .slide {
     height: 101vh;
@@ -251,7 +273,7 @@ a{
     margin-top: 1vh;
     font-size: x-large;
     border-radius: 10px;
-   }
+  }
 
   .navSlide {
     height: 15vh;
@@ -305,40 +327,41 @@ a{
     height: 5vh;
   }
 
-.mobileNavSkills {
-  width: 70vw;
-}
+  .mobileNavSkills {
+    width: 70vw;
+  }
 
-.mobileNavProjects {
-  width: 60vw;
-  background-color: $purple;
-  background-size: cover;
-}
+  .mobileNavProjects {
+    width: 60vw;
+    background-color: $purple;
+    background-size: cover;
+  }
 
-.linkNavMobileProjects {
-  width: 60vw;
-}
+  .linkNavMobileProjects {
+    width: 60vw;
+  }
 
-.mobileNavAbout {
-  width: 50vw;
-}
+  .mobileNavAbout {
+    width: 50vw;
+  }
 
-.skills {
-  height: 200vh;
-}
+  .skills {
+    height: 200vh;
+  }
 
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:801px)  {
+@media (min-width:801px) {
 
   .navSlide {
-   font-size: 1.5em;
-   text-align: end;
+    font-size: 1.5em;
+    text-align: end;
   }
 
-   }
-   /* big landscape tablets, laptops, and desktops */
+}
+
+/* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
 
   .navSlide {
@@ -350,7 +373,8 @@ a{
     border-radius: 0px 5px 5px 0px;
     animation: 2s ease-out 0s 1 slideInFromLeft;
   }
-  .linkNav{
+
+  .linkNav {
     height: 14vh;
     width: 14vw;
   }
@@ -363,9 +387,9 @@ a{
     max-height: 100%;
   }
 
- }
+}
 
- @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   h2 {
     font-weight: bolder;
     font-size: 4vh;
@@ -389,7 +413,6 @@ a{
   .mobileNavProjects {
     width: 60vw;
     background-color: $purple;
-    background-size: cover;
   }
 
   .linkNavMobileProjects {
@@ -409,7 +432,7 @@ a{
     animation: 2s ease-out 0s 1 slideInFromLeft;
   }
 
-  .linkNav{
+  .linkNav {
     font-size: x-large;
     height: 14vh;
   }
@@ -423,12 +446,12 @@ a{
   }
 }
 
-   /* hi-res laptops and desktops */
-   @media (min-width:1281px) {
-    .linkNav{
-      font-size: xx-large;
-      display: block;
-      height: 14vh;
-      width: 14vw;
-    }
-   }
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+  .linkNav {
+    font-size: xx-large;
+    display: block;
+    height: 14vh;
+    width: 14vw;
+  }
+}
