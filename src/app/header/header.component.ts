@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
     if(this.lang === 'en') {
       this.isChecked = true;
     }
-    console.log(this.lang)
   }
 
   onChange(choice: boolean) {
