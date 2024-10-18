@@ -65,7 +65,7 @@ h2 {
 @media (min-width:300px) and (max-width:599px) {
 
   .insidePage {
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     margin: auto;
     display: flex;
@@ -81,8 +81,9 @@ h2 {
   }
 
   .knowledge {
-    margin-top: 2vh;
-    width: 125vw;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
+    height: 150vw;
     display: flex;
     flex-direction: column;
   }
@@ -90,10 +91,6 @@ h2 {
   .textContent {
     height: 30vh;
     width: 100vw;
-  }
-
-  .knowledge {
-    margin-top: 2em;
   }
 
   .iconLogo {
