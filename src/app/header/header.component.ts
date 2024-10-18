@@ -28,6 +28,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'fr';
+    if(this.lang === 'en') {
+      this.isChecked = true;
+    }
+    console.log(this.lang)
   }
 
   onChange(choice: boolean) {
