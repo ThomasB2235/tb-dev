@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -36,13 +36,15 @@ export interface Tile {
 })
 export class AppComponent {
 
+  languageChoice: string;
   isOriginalCursor = true;
   title = 'Thomas Bureller';
 
   constructor(private translateService: TranslateService) {
     this.translateService.addLangs(['fr', 'en']);
     this.translateService.setDefaultLang(localStorage.getItem('lang') || 'fr');
-    this.translateService.use('fr');
+    this.languageChoice = localStorage.getItem('lang') || 'fr';
+    this.translateService.use(this.languageChoice);
   }
   }
 
