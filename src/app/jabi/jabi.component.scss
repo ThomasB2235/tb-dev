@@ -1,0 +1,151 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url('../../assets/fonts/LeagueSpartan.ttf') format('truetype');
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jabi {
+  background: linear-gradient(270deg, #ffffff, #47b798);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  font-family: LeagueSpartan;
+  width: 100vw;
+  height: 100vh;
+  background-color: #47b798;
+  display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.accessPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  animation: 1.5s ease-out 0s 1 slideInFromTop;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.card {
+  flex: 1 1 calc(50% - 16px); /* Occupe 50% de la largeur moins l'espace (gap) */
+  max-width: calc(50% - 16px); /* Limite la largeur maximale à 50% moins l'espace */
+  width: 20vw;
+  height: 20vh;
+  border: 1px solid black;
+}
+
+.backgroundWaiting {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #47b798;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Les éléments du formulaire s'affichent en colonne */
+  align-items: center; /* Centre les éléments horizontalement dans le formulaire */
+  padding: 20px;
+  background-color: #f4f4f4; /* Fond léger pour le formulaire */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Ombre légère pour l'effet visuel */
+}
+
+input {
+  font-family: LeagueSpartan;
+  margin: 10px 0; /* Espacement entre les éléments du formulaire */
+  padding: 8px;
+  width: 250px; /* Largeur du champ de saisie */
+  box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #47b798;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc; /* Couleur du bouton lorsqu'il est désactivé */
+}
+
+button:hover {
+  background-color: #510059; /* Changement de couleur au survol */
+}
+
+.messageErreur {
+  color: #510059;
+  font-size: 14px;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:300px) and (max-width:599px) {
+  form {
+    display: flex;
+    flex-direction: column; /* Les éléments du formulaire s'affichent en colonne */
+    align-items: center; /* Centre les éléments horizontalement dans le formulaire */
+    padding: 20px;
+    width: 80vw;
+    background-color: #f4f4f4; /* Fond léger pour le formulaire */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 20px rgba(81, 0, 89, 0.9); /* Ombre légère pour l'effet visuel */
+    border: 1px solid #510059;
+  }
+
+  label {
+    text-align: center;
+  }
+}
+
+@media screen and (orientation: portrait) {
+
+}
+
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+}

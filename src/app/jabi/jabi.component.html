@@ -1,0 +1,23 @@
+<div class="jabi" *ngIf="lockedScreen">
+  <form (ngSubmit)="checkAnswer()" #answerForm="ngForm">
+    <label>Quel est le nom de votre application mobile pour les résidences seniors ?</label>
+    <input type="text"
+           id="userAnswer"
+           name="userAnswer"
+           [(ngModel)]="userAnswer"
+           required
+           placeholder="Votre réponse"
+           #userAnswerInput="ngModel">
+    <button type="submit" [disabled]="!answerForm.valid">Valider</button>
+    <p class="messageErreur" *ngIf="messageErreur">Un indice : 5 lettres</p>
+  </form>
+  <input type="hidden" id="correctAnswer" value="major">
+</div>
+<div class="backgroundWaiting" *ngIf="!lockedScreen">
+  <div class="accessPage" *ngIf="!lockedScreen">
+    <div class="card">CV</div>
+    <div class="card">Mon profil de développeur</div>
+    <div class="card">Mon experience auprès des seniors</div>
+    <div class="card">Mes envies</div>
+  </div>
+</div>
