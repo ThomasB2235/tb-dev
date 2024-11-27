@@ -15,7 +15,7 @@
 </div>
 <div class="backgroundWaiting" *ngIf="!lockedScreen">
   <div class="accessPage" *ngIf="!lockedScreen">
-    <h1>Thomas Bureller</h1>
+        <h1>Thomas Bureller</h1>
     <div class="formalites fullscreen">
       <div class="card slideFromLeft lightGreen flexbottom">
         <h2 class="halfCard cv">CV</h2>
@@ -23,15 +23,28 @@
           <i class="fa-solid fa-download"></i>
         </div>
       </div>
-      <div  class="card cardLarger slideFromRight">
-        <h2>Lettre de motivation</h2>
+      <div class="card1 cardLarger slideFromRight" (click)="openModal()">
+        <h2 class="fontStyle">Lettre de motivation</h2>
       </div>
     </div>
     <div class="arguments fullscreen">
-      <h2 class="card cardLarger slideFromLeft">Mon experience professionnelle auprès des seniors</h2>
+      <h2 class="card1 cardLarger slideFromLeft">Mon experience professionnelle auprès des seniors</h2>
       <h2 class="card slideFromRight lightGreen">Mes envies</h2>
+    </div>
+    <div class="modal" *ngIf="isModalOpen" >
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">×</span>
+        <p>Madame, Monsieur,</p>
+        <p>Allier technologie et impact humain a toujours été un moteur dans ma carrière. C’est pourquoi je vous adresse ma candidature pour un poste de développeur FullStack au sein de JABI. Votre mission, dédiée à l’amélioration du bien-être des seniors grâce à des outils numériques innovants, résonne profondément avec mes compétences et mes aspirations professionnelles.
+        Mon parcours combine une solide expertise technique et une sensibilité aux besoins humains. En tant que développeur FullStack, j’ai conçu des applications interactives et accessibles, m’appuyant sur des technologies comme Angular, NodeJS et PostgreSQL. Mes projets m’ont permis de développer des solutions intuitives et ergonomiques, en gardant toujours à l’esprit les attentes des utilisateurs finaux.</p>
+        <p>Auparavant pédicure-podologue, j’ai travaillé de nombreuses années auprès des seniors, ce qui m’a permis d’acquérir une compréhension approfondie des enjeux du vieillissement et des besoins spécifiques de ce public. Cette expérience, couplée à mes compétences en développement, me donne une perspective unique pour contribuer aux projets de JABI.
+        Mon ambition est de m’inscrire dans une collaboration durable au sein de votre entreprise, en accompagnant votre développement tout en poursuivant mon apprentissage. Curieux et motivé, je suis prêt à me former sur de nouvelles technologies et à relever les défis à venir pour répondre aux besoins de vos utilisateurs et à l’évolution de vos projets.</p>
+        <p>Je serais honoré de contribuer à la réussite de vos solutions et à l’innovation que vous portez. Dans l’attente d’un éventuel entretien, je vous remercie pour l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
+        <p>Thomas BURELLER</p>
+      </div>
     </div>
   </div>
 </div>
+
 
 <app-footer></app-footer>

@@ -16,13 +16,12 @@ export class JabiComponent {
   lockedScreen = true;
   messageErreur = false;
   fileUrl = 'assets/CVThomasBureller.pdf';
+  isModalOpen: boolean = false;
 
   constructor() {}
 
   checkAnswer() {
-    // Récupère la réponse correcte depuis la div cachée
     const correctAnswer = (document.getElementById('correctAnswer') as HTMLInputElement).value.trim().toLowerCase();
-    // Compare la réponse de l'utilisateur avec la réponse correcte
     if (this.userAnswer.trim().toLowerCase() === correctAnswer) {
       this.lockedScreen = false;
       this.messageErreur = false;
@@ -37,5 +36,15 @@ export class JabiComponent {
     link.href = this.fileUrl;
     link.download = 'CVThomasBureller.pdf';
     link.click();
-    }
+  }
+
+  openModal() {
+    this.isModalOpen = true;
+    console.log(this.isModalOpen)
+  }
+
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 }

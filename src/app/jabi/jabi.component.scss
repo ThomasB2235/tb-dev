@@ -123,6 +123,81 @@ h1 {
   align-items: flex-end !important;
 }
 
+.card1:hover .fontStyle {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.fontStyle {
+  font-size: 2em;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Animation douce */
+}
+
+.card1 {
+  width: 38vw;
+  height: 300px;
+  font-family: LeagueSpartan;
+  background-color: #449b93;
+  color: white;
+  font-size: xx-large;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+              rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+  position: relative; /* Nécessaire pour l'effet de brillance */
+  overflow: hidden; /* Masque les débordements pour l'effet de brillance */
+}
+
+.card1:hover {
+  background: linear-gradient(135deg, #47b798, #510059); /* Passe à un dégradé */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px, rgba(0, 0, 0, 0.12) 0px -5px 10px,
+              rgba(0, 0, 0, 0.15) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 10px;
+  cursor: pointer;
+}
+
+.card1:hover .fontStyle {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.fontStyle {
+  font-size: 2em;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Animation douce */
+}
+
+/* Effet de brillance */
+.card1::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card1:hover::after {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: shine 1.5s linear forwards;
+}
+/* Animation de la brillance */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(45deg);
+  }
+}
+
 .halfCard {
   width: 38vw;
   display: flex;
@@ -137,12 +212,16 @@ h1 {
   background-color: #510059;
   color: white;
   font-size: 2em;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+
 }
 
 .iconDownload:hover {
   background: #bcb6ce;
   color:#510059;
   cursor: pointer;
+  transform: scale(1.1); /* Agrandit légèrement l'icône */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile */
 }
 
 .backgroundWaiting {
@@ -194,6 +273,65 @@ button:hover {
   font-size: 14px;
   margin-top: 10px;
   z-index: 1;
+}
+
+// Modale
+
+.modal {
+  font-family: LeagueSpartan;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.modal-content {
+  position: relative;
+  width: 80vw; /* Largeur adaptée à l'écran */
+  max-height: 80vh; /* Hauteur maximale pour ne pas dépasser la fenêtre */
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+  padding: 20px;
+  height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Assure que les éléments enfants sont disposés en colonne */
+  justify-content: center; /* Centre verticalement */
+  text-indent: 2em;
+  animation: borderAnimation 3s infinite alternate;
+}
+
+.modal-content p:last-of-type {
+  margin-top: 2em;
+  text-align: right; /* Aligne le texte "Thomas Bureller" à droite */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #510059;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* smartphones, Android phones, landscape iPhone */
