@@ -39,6 +39,7 @@ export interface Tile {
 })
 export class AppComponent {
 
+  showRouterOutlet = false;
   languageChoice: string;
   isOriginalCursor = true;
   title = 'Thomas Bureller';
@@ -53,6 +54,8 @@ export class AppComponent {
       // Vérifier si l'URL contient '/jabi' et cacher les autres composants si nécessaire
       this.showHeader = this.router.url !== '/jabi';
       this.showFooter = this.router.url !== '/jabi';
+      this.showRouterOutlet = event.url === '/jabi';
+
       this.showOtherComponents = this.router.url !== '/jabi';
     });
     this.translateService.addLangs(['fr', 'en']);

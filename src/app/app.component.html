@@ -1,4 +1,4 @@
-<router-outlet></router-outlet>
+
 
 <app-header *ngIf="showHeader"></app-header>
 
@@ -9,4 +9,7 @@
 </div>
 
 <app-footer *ngIf="showFooter"></app-footer>
+<div *ngIf="showRouterOutlet">
+  <router-outlet></router-outlet>
+</div>
 
