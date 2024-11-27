@@ -1,18 +1,22 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-jabi',
   standalone: true,
-  imports: [NgIf, FormsModule],
+  imports: [NgIf, FormsModule, FooterComponent],
   templateUrl: './jabi.component.html',
   styleUrl: './jabi.component.scss'
 })
 export class JabiComponent {
+
   userAnswer: string = '';
   lockedScreen = true;
   messageErreur = false;
+  fileUrl = 'assets/CVThomasBureller.pdf';
+
   constructor() {}
 
   checkAnswer() {
@@ -27,4 +31,11 @@ export class JabiComponent {
       this.messageErreur = true;
     }
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = this.fileUrl;
+    link.download = 'CVThomasBureller.pdf';
+    link.click();
+    }
 }

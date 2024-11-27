@@ -15,9 +15,23 @@
 </div>
 <div class="backgroundWaiting" *ngIf="!lockedScreen">
   <div class="accessPage" *ngIf="!lockedScreen">
-    <div class="card">CV</div>
-    <div class="card">Mon profil de développeur</div>
-    <div class="card">Mon experience auprès des seniors</div>
-    <div class="card">Mes envies</div>
+    <h1>Thomas Bureller</h1>
+    <div class="formalites fullscreen">
+      <div class="card slideFromLeft lightGreen flexbottom">
+        <h2 class="halfCard cv">CV</h2>
+        <div class="halfCard iconDownload" (click)="downloadCV()">
+          <i class="fa-solid fa-download"></i>
+        </div>
+      </div>
+      <div  class="card cardLarger slideFromRight">
+        <h2>Lettre de motivation</h2>
+      </div>
+    </div>
+    <div class="arguments fullscreen">
+      <h2 class="card cardLarger slideFromLeft">Mon experience professionnelle auprès des seniors</h2>
+      <h2 class="card slideFromRight lightGreen">Mes envies</h2>
+    </div>
   </div>
 </div>
+
+<app-footer></app-footer>

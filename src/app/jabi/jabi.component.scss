@@ -53,21 +53,96 @@
 .accessPage {
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #bcb6ce;
   animation: 1.5s ease-out 0s 1 slideInFromTop;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-around; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
 }
 
+.fullscreen {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+h1 {
+  font-family: LeagueSpartan;
+  font-weight: bold;
+  color: white;
+  animation: 3s ease-out 0s 1 opacity0to100;
+  position: absolute;
+  top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lightGreen {
+  color: black !important;
+  background-color: #ffffff !important;
+}
+
+.cardLarger {
+  width: 60vw !important;
+  height: 300px;
+}
+
+.slideFromLeft {
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.slideFromRight {
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
 .card {
-  flex: 1 1 calc(50% - 16px); /* Occupe 50% de la largeur moins l'espace (gap) */
-  max-width: calc(50% - 16px); /* Limite la largeur maximale à 50% moins l'espace */
-  width: 20vw;
-  height: 20vh;
-  border: 1px solid black;
+  width: 38vw;
+  height: 300px;
+  font-family: LeagueSpartan;
+  background-color: #449b93;
+  color: white;
+  font-size: xx-large;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.cv {
+  font-family: LeagueSpartan;
+  font-weight: bolder;
+  color:#bcb6ce;
+  font-size: 7em;
+}
+
+.flexbottom {
+  align-items: flex-end !important;
+}
+
+.halfCard {
+  width: 38vw;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement */
+  text-align: center;      /* Centrer le texte si nécessaire */
+}
+
+.iconDownload {
+  height: 150px !important;
+  width: 200px !important;
+  background-color: #510059;
+  color: white;
+  font-size: 2em;
+}
+
+.iconDownload:hover {
+  background: #bcb6ce;
+  color:#510059;
+  cursor: pointer;
 }
 
 .backgroundWaiting {
@@ -138,7 +213,62 @@ button:hover {
   label {
     text-align: center;
   }
+
+  .fullscreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+  }
+
+  .cardLarger {
+    width: 100vw !important;
+    height: 300px;
+  }
+
+  .slideFromLeft {
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .slideFromRight {
+    animation: 2s ease-out 0s 1 slideInFromRight;
+  }
+
+  .card {
+    width: 100vw;
+  }
+
+  .cv {
+    font-family: LeagueSpartan;
+    font-weight: bolder;
+    color:#bcb6ce;
+    font-size: 3em;
+  }
+
+  .flexbottom {
+    align-items: flex-end !important;
+  }
+
+  .halfCard {
+    width: 54vw;
+    height: 300px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    text-align: center;      /* Centrer le texte si nécessaire */
+  }
+
+  h1 {
+    font-size: medium;
+    top: 0px;
+    right: 30px;
+  }
 }
+
+
 
 @media screen and (orientation: portrait) {
 
