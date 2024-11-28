@@ -274,7 +274,7 @@ img {
 
 .navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
@@ -286,6 +286,12 @@ img {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
+}
+
+.slide>h2 {
+  font-family: LeagueSpartan;
+  color: #510059;
+  font-weight: bold;
 }
 
 .navigation button:hover {
