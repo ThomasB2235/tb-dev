@@ -130,13 +130,13 @@ h1 {
 
 .fontStyle {
   font-size: 2em;
-  transition: color 0.3s ease, font-weight 0.3s ease; /* Animation douce */
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-family: LeagueSpartan;
 }
 
 .card1 {
   width: 38vw;
   height: 300px;
-  font-family: LeagueSpartan;
   background-color: #449b93;
   color: white;
   font-size: xx-large;
@@ -196,6 +196,100 @@ h1 {
   100% {
     transform: translateX(200%) rotate(45deg);
   }
+}
+
+.card2 {
+  display: flex; /* Active Flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  background-color: #510059; /* Couleur principale */
+  color: #fff; /* Texte blanc */
+  font-size: 1.2em; /* Taille du texte */
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  transition: all 0.3s ease; /* Animation fluide pour les effets */
+}
+
+.card2:hover {
+  background-color: #47b798; /* Change la couleur de fond au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Accentue l’ombre */
+  transform: translateY(-3px); /* Légère élévation */
+  cursor: pointer; /* Indique l'interaction */
+}
+
+.modal1 {
+  font-family: LeagueSpartan;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.modal1-content {
+  position: relative;
+  width: 80vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-indent: 2em;
+  animation: borderAnimation 3s infinite alternate;
+}
+
+img {
+  float: left; margin: 0 15px 15px 0; width: 300px;
+}
+
+.slide {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  padding-top: 10px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  background-color: #47b798;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navigation button:hover {
+  background-color: #510059;
 }
 
 .halfCard {
@@ -346,6 +440,24 @@ button:hover {
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 4px 20px rgba(81, 0, 89, 0.9); /* Ombre légère pour l'effet visuel */
     border: 1px solid #510059;
+    width: 90vw; /* Ajuste le formulaire à la largeur de l'écran */
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+  }
+
+  .card, .card1, .cardLarger, .halfCard {
+    width: 90vw; /* Réduit la largeur à 90% de l'écran */
+    margin: 0 auto; /* Centre les éléments horizontalement */
+  }
+
+  .fullscreen {
+    flex-direction: column !important; /* Éléments empilés */
+    justify-content: flex-start; /* Aligne les éléments au début */
+    align-items: center; /* Centre les éléments */
+  }
+
+  .modal-content {
+    width: 90vw; /* Ajuste la largeur à l'écran mobile */
+    max-height: 80vh; /* Empêche que la modale dépasse l'écran */
   }
 
   label {

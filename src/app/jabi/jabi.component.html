@@ -28,8 +28,33 @@
       </div>
     </div>
     <div class="arguments fullscreen">
-      <h2 class="card1 cardLarger slideFromLeft">Mon experience professionnelle auprès des seniors</h2>
+      <h2 class="card2 cardLarger slideFromLeft" (click)="openModal1()">Mon experience professionnelle auprès des seniors</h2>
       <h2 class="card slideFromRight lightGreen">Mes envies</h2>
+    </div>
+    <div class="modal1" *ngIf="isModal1Open">
+      <div class="modal1-content">
+        <span class="close" (click)="closeModal1()">×</span>
+        <div class="modal-slider">
+          <div class="slide" *ngIf="currentSlide === 0">
+            <h2>Mon expérience en tant que Podologue</h2>
+            <p>Pendant 6 ans, j’ai eu la chance de travailler en tant que podologue, principalement auprès de personnes âgées en maison de retraite. Ce rôle m’a permis de nouer des relations solides et humaines avec les infirmières, les médecins, et bien sûr, les résidents eux-mêmes. Chaque jour, je collaborais avec les équipes soignantes pour apporter des soins adaptés et prendre soin des pieds de ceux qui en avaient le plus besoin. J’ai appris à écouter les patients, à comprendre leurs préoccupations et à travailler en étroite collaboration avec les autres soignants pour garantir leur bien-être. Cette expérience m’a profondément marqué, et elle m’a donné une vision plus complète du monde des maisons de retraite, un univers où la technologie, l’empathie et les soins doivent se compléter. Aujourd’hui, dans mon rôle de développeur chez JABI, je souhaite apporter cette approche humaine à la création de solutions qui répondent aux vrais besoins des soignants et des résidents.</p>
+            <img src="../../assets/images/podologue.webp" alt="Podologue en action" />
+          </div>
+          <div class="slide" *ngIf="currentSlide === 1">
+            <h2>Mon expérience en pharmacie</h2>
+            <p>En tant que préparateur en pharmacie pendant 4 ans, j'ai eu l'opportunité de travailler au quotidien avec des personnes âgées, en leur fournissant des médicaments et des conseils adaptés à leurs besoins spécifiques. Ce rôle m'a non seulement permis de développer une connaissance approfondie des traitements et de la gestion de la santé des seniors, mais il m'a également appris à être attentif aux détails, à gérer des informations sensibles et à interagir de manière claire et empathique avec des patients souvent vulnérables.
+
+              Ces compétences se traduisent parfaitement dans le domaine du développement de solutions logicielles, notamment en ce qui concerne la création d'outils intuitifs et accessibles, spécialement conçus pour des utilisateurs parfois peu familiers avec la technologie. Travailler au sein d’une équipe pluridisciplinaire de soignants, tels que les médecins et les infirmiers, m'a permis de renforcer ma capacité à collaborer efficacement, à comprendre des besoins complexes et à proposer des solutions adaptées.
+
+              Chez JABI, je suis convaincu que mes expériences passées me permettront d'apporter une approche humaine et pragmatique à la création de solutions numériques, tout en ayant à cœur de contribuer à l'amélioration des conditions de vie des seniors grâce à des outils technologiques adaptés.</p>
+            <img src="../../assets/images/pharmacy.webp" alt="Préparateur en pharmacie" />
+          </div>
+          <div class="navigation">
+            <button (click)="goToSlide(0)">Podologue</button>
+            <button (click)="goToSlide(1)">Préparateur en pharmacie</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="modal" *ngIf="isModalOpen" >
       <div class="modal-content">

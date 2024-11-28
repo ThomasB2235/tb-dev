@@ -17,6 +17,8 @@ export class JabiComponent {
   messageErreur = false;
   fileUrl = 'assets/CVThomasBureller.pdf';
   isModalOpen: boolean = false;
+  isModal1Open: boolean = false;
+  currentSlide: number = 0;
 
   constructor() {}
 
@@ -43,8 +45,19 @@ export class JabiComponent {
     console.log(this.isModalOpen)
   }
 
-
   closeModal() {
     this.isModalOpen = false;
+  }
+
+  openModal1() {
+    this.isModal1Open = true;
+  }
+
+  closeModal1() {
+    this.isModal1Open = false;
+  }
+
+  goToSlide(slideIndex: number) {
+    this.currentSlide = slideIndex;
   }
 }
