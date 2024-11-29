@@ -8,7 +8,7 @@
            required
            placeholder="Votre réponse"
            #userAnswerInput="ngModel">
-    <button type="submit" [disabled]="!answerForm.valid">Valider</button>
+    <button type="submit" [disabled]="!answerForm.valid" aria-label="Valider">Valider</button>
     <p class="messageErreur" *ngIf="messageErreur">Un indice : 5 lettres</p>
   </form>
   <input type="hidden" id="correctAnswer" value="major">
@@ -39,7 +39,7 @@
           <div class="slide" *ngIf="currentSlide === 0">
             <h2>Mon expérience en podologie</h2>
             <p>Pendant 6 ans, j’ai eu la chance de travailler en tant que podologue, principalement auprès de personnes âgées en maison de retraite. Ce rôle m’a permis de nouer des relations solides et humaines avec les infirmières, les médecins, et bien sûr, les résidents eux-mêmes. Chaque jour, je collaborais avec les équipes soignantes pour apporter des soins adaptés et prendre soin des pieds de ceux qui en avaient le plus besoin. J’ai appris à écouter les patients, à comprendre leurs préoccupations et à travailler en étroite collaboration avec les autres soignants pour garantir leur bien-être. Cette expérience m’a profondément marqué, et elle m’a donné une vision plus complète du monde des maisons de retraite, un univers où la technologie, l’empathie et les soins doivent se compléter. Aujourd’hui, dans mon rôle de développeur chez JABI, je souhaite apporter cette approche humaine à la création de solutions qui répondent aux besoins des soignants et des résidents.</p>
-            <img src="../../assets/images/podologue.webp" alt="Podologue en action" />
+            <img src="../../assets/images/podologue.webp" alt="Podologue au près d'une patiente" />
           </div>
           <div class="slide" *ngIf="currentSlide === 1">
             <h2>Mon expérience en pharmacie</h2>
@@ -48,11 +48,11 @@
               Ces compétences se traduisent parfaitement dans le développement de solutions logicielles, notamment en concevant des outils intuitifs, accessibles, et adaptés aux besoins d’utilisateurs parfois peu à l’aise avec la technologie, tout en respectant les exigences de sécurité et de confidentialité propres au domaine de la santé.
 
               Chez JABI, je suis convaincu que mes expériences passées me permettront d'apporter une approche humaine et pragmatique à la création de solutions numériques, tout en ayant à cœur de contribuer à l'amélioration des conditions de vie des seniors grâce à des outils technologiques adaptés.</p>
-            <img src="../../assets/images/pharmacy.webp" alt="Préparateur en pharmacie" />
+            <img src="../../assets/images/pharmacy.webp" alt="Préparateur en pharmacie conseillant un couple" />
           </div>
           <div class="navigation">
-            <button (click)="goToSlide(0)">Podologue</button>
-            <button (click)="goToSlide(1)">Pharmacie</button>
+            <button aria-label="Podologue"(click)="goToSlide(0)">Podologue</button>
+            <button aria-label="Pharmacie"(click)="goToSlide(1)">Pharmacie</button>
           </div>
         </div>
       </div>

@@ -53,9 +53,9 @@ app-footer {
   width: 100vw;
   height: 100vh;
   background-color: #47b798;
-  display: flex; /* Utilisation de Flexbox pour centrer le contenu */
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accessPage {
@@ -65,8 +65,8 @@ app-footer {
   animation: 1.5s ease-out 0s 1 slideInFromTop;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .fullscreen {
@@ -75,8 +75,8 @@ app-footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .margin0 {
@@ -122,8 +122,8 @@ h1 {
   color: white;
   font-size: xx-large;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: center;
+  align-items: center;
 }
 
 .cv {
@@ -160,13 +160,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
-  position: relative; /* Nécessaire pour l'effet de brillance */
-  overflow: hidden; /* Masque les débordements pour l'effet de brillance */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .card1:hover {
-  background: linear-gradient(135deg, #47b798, #510059); /* Passe à un dégradé */
+  background: linear-gradient(135deg, #47b798, #510059);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px, rgba(0, 0, 0, 0.12) 0px -5px 10px,
               rgba(0, 0, 0, 0.15) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 10px;
   cursor: pointer;
@@ -179,10 +179,9 @@ h1 {
 
 .fontStyle {
   font-size: 2em;
-  transition: color 0.3s ease, font-weight 0.3s ease; /* Animation douce */
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-/* Effet de brillance */
 .card1::after {
   content: '';
   position: absolute;
@@ -202,7 +201,7 @@ h1 {
   opacity: 1;
   animation: shine 1.5s linear forwards;
 }
-/* Animation de la brillance */
+
 @keyframes shine {
   0% {
     transform: translateX(-100%) rotate(45deg);
@@ -213,12 +212,12 @@ h1 {
 }
 
 .card2 {
-  display: flex; /* Active Flexbox */
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  background-color: #510059; /* Couleur principale */
-  color: #fff; /* Texte blanc */
-  font-size: 1.2em; /* Taille du texte */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #510059;
+  color: #fff;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -229,10 +228,10 @@ h1 {
 }
 
 .card2:hover {
-  background-color: #47b798; /* Change la couleur de fond au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Accentue l’ombre */
-  transform: translateY(-3px); /* Légère élévation */
-  cursor: pointer; /* Indique l'interaction */
+  background-color: #47b798;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .modal1 {
@@ -316,9 +315,9 @@ img {
 .halfCard {
   width: 38vw;
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center;     /* Centre verticalement */
-  text-align: center;      /* Centrer le texte si nécessaire */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .iconDownload {
@@ -327,15 +326,15 @@ img {
   background-color: #510059;
   color: white;
   font-size: 2em;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .iconDownload:hover {
   background: #bcb6ce;
   color:#510059;
   cursor: pointer;
-  transform: scale(1.1); /* Agrandit légèrement l'icône */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .backgroundWaiting {
@@ -347,20 +346,20 @@ img {
 
 form {
   display: flex;
-  flex-direction: column; /* Les éléments du formulaire s'affichent en colonne */
-  align-items: center; /* Centre les éléments horizontalement dans le formulaire */
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  background-color: #f4f4f4; /* Fond léger pour le formulaire */
-  border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Ombre légère pour l'effet visuel */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 input {
   font-family: LeagueSpartan;
-  margin: 10px 0; /* Espacement entre les éléments du formulaire */
+  margin: 10px 0;
   padding: 8px;
-  width: 250px; /* Largeur du champ de saisie */
-  box-sizing: border-box; /* Inclut le padding dans la largeur */
+  width: 250px;
+  box-sizing: border-box;
 }
 
 button {
@@ -375,11 +374,11 @@ button {
 }
 
 button:disabled {
-  background-color: #ccc; /* Couleur du bouton lorsqu'il est désactivé */
+  background-color: #ccc;
 }
 
 button:hover {
-  background-color: #510059; /* Changement de couleur au survol */
+  background-color: #510059;
 }
 
 .messageErreur {
@@ -405,7 +404,6 @@ button:hover {
 
 .image-button img {
   border-radius: 50%;
-  border: 5px solid white;
 }
 
 .image-button:hover {
@@ -449,7 +447,7 @@ button:hover {
 
 .modal-content p:last-of-type {
   margin-top: 2em;
-  text-align: right; /* Aligne le texte "Thomas Bureller" à droite */
+  text-align: right;
 }
 
 .close {
@@ -476,16 +474,16 @@ button:hover {
 @media (min-width:300px) and (max-width:599px) {
   form {
     display: flex;
-    flex-direction: column; /* Les éléments du formulaire s'affichent en colonne */
-    align-items: center; /* Centre les éléments horizontalement dans le formulaire */
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     width: 80vw;
-    background-color: #f4f4f4; /* Fond léger pour le formulaire */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 20px rgba(81, 0, 89, 0.9); /* Ombre légère pour l'effet visuel */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(81, 0, 89, 0.9);
     border: 1px solid #510059;
-    width: 90vw; /* Ajuste le formulaire à la largeur de l'écran */
-    box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+    width: 90vw;
+    box-sizing: border-box;
   }
 
   .iconDownload:hover {
@@ -502,6 +500,8 @@ button:hover {
 
   app-footer {
     position: fixed;
+    width: 20vw;
+    height: 10vh;
     top: 10px;
     left: 10px;
   }
@@ -512,8 +512,8 @@ button:hover {
   }
 
   .card, .card1, .cardLarger, .halfCard {
-    width: 90vw; /* Réduit la largeur à 90% de l'écran */
-    margin: 0 auto; /* Centre les éléments horizontalement */
+    width: 90vw;
+    margin: 0 auto;
   }
 
   .modal-content {
@@ -540,8 +540,8 @@ button:hover {
     display: flex;
     flex-direction: column !important;
     flex-wrap: wrap;
-    justify-content: space-around; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    justify-content: space-around;
+    align-items: center;
   }
 
   .cardLarger {
@@ -576,9 +576,9 @@ button:hover {
     width: 54vw;
     height: 300px;
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */
-    text-align: center;      /* Centrer le texte si nécessaire */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   h1 {
