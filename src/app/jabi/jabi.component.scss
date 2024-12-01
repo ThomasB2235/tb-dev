@@ -264,6 +264,42 @@ h1 {
   animation: borderAnimation 3s infinite alternate;
 }
 
+.modal2-content {
+  position: relative;
+  width: 90vw;
+  max-height: calc(100vh - 20px);
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+  animation: borderAnimation 3s infinite alternate;
+}
+
+.modal2-content h3 {
+  font-family: LeagueSpartan;
+  text-align: center;
+  font-weight: bold;
+  color: #510059;
+}
+
+.modal2-content li {
+  font-family: LeagueSpartan;
+  padding-bottom: 12px;
+  font-size: medium;
+  text-decoration: underline;
+}
+
+.modal2-content h3,
+.modal2-content p,
+.modal2-content ul {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   float: left;
   margin: 0 15px 15px 0;
@@ -518,6 +554,12 @@ button:hover {
 
   .modal1-content {
     max-height: 200vh !important;
+  }
+
+  .modal2-content {
+    width: 95vw;
+    max-height: calc(100vh - 20px);
+    padding: 15px;
   }
 
   .card, .card1, .cardLarger, .halfCard {

@@ -22,32 +22,28 @@
           <i class="fa-solid fa-download"></i>
         </div>
       </div>
-      <div class="card1 cardLarger slideFromRight" (click)="openModal()">
+      <div class="card1 cardLarger slideFromRight" (click)="openModal(1)">
         <h2 class="fontStyle">Lettre de motivation</h2>
       </div>
     </div>
     <div class="arguments fullscreen">
-      <h2 class="card2 cardLarger slideFromLeft margin0 mobileH2" (click)="openModal1()">Mon experience professionnelle auprès des seniors</h2>
-      <div class="card slideFromRight lightGreen image-button" (click)="openModal1()">
+      <h2 class="card2 cardLarger slideFromLeft margin0 mobileH2" (click)="openModal(2)">Mon experience professionnelle auprès des seniors</h2>
+      <div class="card slideFromRight lightGreen image-button" (click)="openModal(3)">
         <img src="../../assets/images/profiljabi.png" alt="Thomas Bureller" />
       </div>
     </div>
     <div class="modal1" *ngIf="isModal1Open">
       <div class="modal1-content">
-        <span class="close" (click)="closeModal1()">×</span>
+        <span class="close" (click)="closeModal(2)">×</span>
         <div class="modal-slider">
           <div class="slide" *ngIf="currentSlide === 0">
             <h2>Mon expérience en podologie</h2>
-            <p>Pendant 6 ans, j’ai eu la chance de travailler en tant que podologue, principalement auprès de personnes âgées en maison de retraite (EHPAD, résidence senior, service spécialisé). Ce rôle m’a permis de nouer des relations solides et humaines avec les infirmières, les médecins, et bien sûr, les résidents eux-mêmes. Chaque jour, je collaborais avec les équipes soignantes pour apporter des soins adaptés et prendre soin des pieds de ceux qui en avaient le plus besoin. J’ai appris à écouter les patients, à comprendre leurs préoccupations et à travailler en étroite collaboration avec les autres soignants pour garantir leur bien-être. Cette expérience m’a profondément marqué, et elle m’a donné une vision plus complète du monde des maisons de retraite, un univers où la technologie, l’empathie et les soins doivent se compléter. Aujourd’hui, dans mon rôle de développeur chez JABI, je souhaite apporter cette approche humaine à la création de solutions qui répondent aux besoins des soignants et des résidents.</p>
+            <p>{{podoText}}</p>
             <img src="../../assets/images/podologue.webp" alt="Podologue au près d'une patiente" />
           </div>
           <div class="slide" *ngIf="currentSlide === 1">
             <h2>Mon expérience en pharmacie</h2>
-            <p>En tant que préparateur en pharmacie pendant 4 ans, j'ai eu l'opportunité de travailler au quotidien avec des personnes âgées, en leur fournissant des médicaments et des conseils adaptés à leurs besoins spécifiques. Ce rôle m’a non seulement permis de développer une connaissance approfondie des traitements et de la gestion de la santé des seniors, mais aussi de comprendre les besoins spécifiques liés à l’utilisation des logiciels de santé. J’ai appris à gérer des informations sensibles dans des outils tels que les logiciels de dossiers médicaux partagés (DMP) ou de gestion des soins. Cette expérience m’a sensibilisé aux attentes des soignants et des patients face à ces technologies, et m’a appris à être attentif aux détails, tout en interagissant de manière claire et empathique avec des patients souvent vulnérables.
-
-              Ces compétences se traduisent parfaitement dans le développement de solutions logicielles, notamment en concevant des outils intuitifs, accessibles, et adaptés aux besoins d’utilisateurs parfois peu à l’aise avec la technologie, tout en respectant les exigences de sécurité et de confidentialité propres au domaine de la santé.
-
-              Chez JABI, je suis convaincu que mes expériences passées me permettront d'apporter une approche humaine et pragmatique à la création de solutions numériques, tout en ayant à cœur de contribuer à l'amélioration des conditions de vie des seniors grâce à des outils technologiques adaptés.</p>
+            <p>{{paharmacyText}}</p>
             <img src="../../assets/images/pharmacy.webp" alt="Préparateur en pharmacie conseillant un couple" />
           </div>
           <div class="navigation">
@@ -59,7 +55,7 @@
     </div>
     <div class="modal" *ngIf="isModalOpen" >
       <div class="modal-content">
-        <span class="close" (click)="closeModal()">×</span>
+        <span class="close" (click)="closeModal(1)">×</span>
         <p>Madame, Monsieur,</p>
         <p>Allier technologie et impact humain a toujours été un moteur dans ma carrière. C’est pourquoi je vous adresse ma candidature pour un poste de développeur FullStack au sein de JABI. Votre mission, dédiée à l’amélioration du bien-être des seniors grâce à des outils numériques innovants, résonne profondément avec mes compétences et mes aspirations professionnelles.
         Mon parcours combine une solide expertise technique et une sensibilité aux besoins humains. En tant que développeur FullStack, j’ai conçu des applications interactives et accessibles, m’appuyant sur des technologies comme Angular, NodeJS et PostgreSQL. Mes projets m’ont permis de développer des solutions intuitives et ergonomiques, en gardant toujours à l’esprit les attentes des utilisateurs finaux.</p>
@@ -67,6 +63,35 @@
         Mon ambition est de m’inscrire dans une collaboration durable au sein de votre entreprise, en accompagnant votre développement tout en poursuivant mon apprentissage. Curieux et motivé, je suis prêt à me former sur de nouvelles technologies et à relever les défis à venir pour répondre aux besoins de vos utilisateurs et à l’évolution de vos projets.</p>
         <p>Je serais honoré de contribuer à la réussite de vos solutions et à l’innovation que vous portez. Dans l’attente d’un éventuel entretien, je vous remercie pour l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
         <p>Thomas BURELLER</p>
+      </div>
+    </div>
+
+    <div class="modal" *ngIf="isModal2Open" >
+      <div class="modal2-content">
+        <span class="close" (click)="closeModal(3)">×</span>
+        <h3>Mes projets de développeur.</h3>
+        <p>Présent chez Accenture depuis deux ans, j'ai participé à 4 projets :</p>
+        <ul>
+          <li>Création et développement Front/Back d'un parcours de souscription pour un assuré dans le but de finaliser un contrat.</li>
+            <p>Conception : Réalisations de diagrammes et de maquettage.
+            Développement: Partie front-end principalement, sous Angular, et developpemnt d'une partie du Back sous NestJS avec une Base de données MongoDb.<br>
+            Livraison applicative réalisée par mes soins, et suivi des anomalies et évolutions apportées.</p>
+          <li>Développement d'un site de type Escape Game pour les collégiens :</li>
+            <p>Mon but sur ce projet: Participer à l'intégration et l'évaluation de 6 POE au sein de l'entreprise par le développement du projet.<br>
+            Participer à la conception/maquettage autour d'un chef de projet, d'un UX designer.<br>
+            Présentation des céremonies Agiles, intégration des POE (mise en place du poste de travail, revues de codes).</p>
+          <li>Développement d'un jeu de plateau (type Zelda) pour une bonne d'arcade :</li>
+            Mon but sur ce projet: Participer à l'intégration et l'évaluation de 6 POE au sein de l'entreprise par le développement du projet.<br>
+            Participer à la conception/maquettage autour d'un chef de projet, d'un UX designer.<br>
+            <p>Présentation des céremonies Agiles, intégration, des POE (mise en place du poste de travail, revues de codes).</p>
+          <li>Présence depuis 18 mois au sein d'un projet pour une entreprise public:</li>
+          <div>
+            <p>Application mise en service il y a 7 ans, traitant plus de 200.000 dossiers par an, avec une logique métier complexe.<br>
+              Technologies : Angular, NodeJs (Loopback), SQL.<br>
+              Corrections d'anomalies, Mise en place d'évolution, de scripts SQL, Déploiement applicatif sur les environnements, revues de code...<br>
+              Développement significatif: mise en place d'une API (et d'un service mock) pour la communication entre deux services plublics, réduisant le flux de courriers papier de plus 10.000 unités par an.</p>
+          </div>
+        </ul>
       </div>
     </div>
   </div>
