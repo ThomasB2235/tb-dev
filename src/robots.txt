@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tb-dev.fr/sitemap.xml
