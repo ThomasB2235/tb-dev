@@ -498,6 +498,12 @@ button:hover {
     text-align: center;
   }
 
+  .navigation {
+    position: fixed;
+    width: 80vw;
+    bottom: 5px;
+  }
+
   app-footer {
     position: fixed;
     width: 20vw;
@@ -507,8 +513,11 @@ button:hover {
   }
 
   .slide {
-    padding-top: 70vh;
-    height: 140vh;
+    height: 80vh !important;
+  }
+
+  .modal1-content {
+    max-height: 200vh !important;
   }
 
   .card, .card1, .cardLarger, .halfCard {
