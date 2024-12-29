@@ -1,6 +1,7 @@
 @import '../../colors';
 
 .skillsBackground {
+  background: -webkit-linear-gradient(300deg, $whiteyellow, $lightyellow, $yellow);
   background: linear-gradient(300deg, $whiteyellow, $lightyellow, $yellow);
   background-size: 180% 180%;
   animation: gradient-animation 10s ease infinite;

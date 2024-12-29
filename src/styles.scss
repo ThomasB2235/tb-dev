@@ -388,7 +388,8 @@ a {
   }
 
   .container {
-    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
 }
@@ -458,4 +459,5 @@ a {
     height: 14vh;
     width: 14vw;
   }
+
 }
