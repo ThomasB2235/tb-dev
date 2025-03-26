@@ -21,13 +21,13 @@ h1 {
 }
 
 section>.mat-mdc-slide-toggle {
-  --mdc-switch-selected-focus-state-layer-color: #ffb370;
-  --mdc-switch-selected-handle-color: #ffb370;
-  --mdc-switch-selected-hover-state-layer-color: #ffb370;
+  --mdc-switch-selected-focus-state-layer-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --mdc-switch-selected-handle-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --mdc-switch-selected-hover-state-layer-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
   --mdc-switch-selected-pressed-state-layer-color: #ffb370;
-  --mdc-switch-selected-focus-handle-color: #ffb370;
-  --mdc-switch-selected-hover-handle-color: #ffb370;
-  --mdc-switch-selected-pressed-handle-color: #ffb370;
+  --mdc-switch-selected-focus-handle-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --mdc-switch-selected-hover-handle-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --mdc-switch-selected-pressed-handle-color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
   --mdc-switch-selected-focus-track-color: #92414d;
   --mdc-switch-selected-hover-track-color: #92414d;
   --mdc-switch-selected-pressed-track-color: #92414d;

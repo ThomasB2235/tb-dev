@@ -1,114 +1,251 @@
 @import '../../colors';
 
-.skillsBackground {
-  background: -webkit-linear-gradient(300deg, $whiteyellow, $lightyellow, $yellow);
-  background: linear-gradient(300deg, $whiteyellow, $lightyellow, $yellow);
-  background-size: 180% 180%;
-  animation: gradient-animation 10s ease infinite;
-}
-
-.textContent {
-  height: 50vh;
-  width: 15vw;
-}
-
-.textContent,
-h2 {
-  font-size: larger;
-  text-align: center;
-  font-weight: bolder;
-  color: $lightblue;
-  font-family: LeagueSpartan;
-}
-
-.insidePage {
-  height: 70vh;
-  width: 80vw;
-  margin: auto;
-  display: flex;
-}
-
-.knowledge {
-  margin-top: 2vh;
-  width: 15vw;
+.skills-section {
+  background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
+  height: 100vh;
+  padding: 1.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(203, 213, 225, 0.4) 0%, transparent 50%);
+    pointer-events: none;
+  }
 }
 
-.icon {
-  background-color: $purple;
-  color: $whiteyellow;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+.back-to-top {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+
+  a {
+    color: $purple;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $lightblue;
+    }
+  }
+}
+
+.section-title {
   text-align: center;
-  border-radius: 25px;
-  font-size: xx-large;
+  color: $lightblue;
+  font-family: LeagueSpartan;
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-.iconLogo {
-  width: 15vw;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: min-content;
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4);
+    border-color: rgba($lightblue, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9));
+  }
+}
+
+.skill-icon {
+  background: linear-gradient(135deg, $purple, darken($purple, 15%));
+  color: #ffffff;
+  min-width: 80px;
+  height: 80px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  box-shadow:
+    0 4px 6px -1px rgba($purple, 0.2),
+    0 2px 4px -1px rgba($purple, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  order: 2;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%);
+    pointer-events: none;
+  }
+
+  i {
+    font-size: 1.75rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 
+.skill-content {
+  flex: 1;
+  order: 1;
 
-.line {
-  width: 15vw;
-  height: 2px;
-  background-color: $purple;
-  margin-bottom: 3vh;
+  h2 {
+    color: $lightblue;
+    font-family: LeagueSpartan;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
 }
 
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-/* smartphones, Android phones, landscape iPhone */
-@media (min-width:300px) and (max-width:599px) {
+  li {
+    color: $purple;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+    font-size: 1rem;
 
-  .insidePage {
-    height: 200vh;
-    width: 100vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    &:hover {
+      color: $lightblue;
+      transform: translateX(2px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 1rem;
   }
 
-  .line {
-    display: none;
-    width: 100vw;
-    height: 2px;
-    background-color: $purple;
-    margin-bottom: 3vh;
+  .section-title {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
   }
 
-  .knowledge {
-    margin-bottom: 5vh;
-    margin-top: 1vh;
-    display: flex;
-    flex-direction: column;
+  .skills-grid {
+    gap: 1rem;
   }
 
-  .textContent {
-    height: 30vh;
-    width: 100vw;
+  .skill-card {
+    padding: 1rem;
+    gap: 0.75rem;
   }
 
-  .iconLogo {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .skill-icon {
+    min-width: 45px;
+    height: 45px;
+
+    i {
+      font-size: 1.1rem;
+    }
   }
 
-  .icon {
-    background-color: $purple;
-    color: $whiteyellow;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    border-radius: 25px;
-    font-size: xx-large;
+  .skill-content {
+    h2 {
+      font-size: 0.8rem;
+      margin-bottom: 0.4rem;
+    }
   }
 
+  .skill-list {
+    li {
+      font-size: 0.65rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .skills-grid {
+    gap: 0.75rem;
+  }
+
+  .skill-card {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .skill-icon {
+    min-width: 40px;
+    height: 40px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  .skill-content {
+    h2 {
+      font-size: 0.7rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .skill-list {
+    li {
+      font-size: 0.6rem;
+      margin-bottom: 0.15rem;
+    }
+  }
 }

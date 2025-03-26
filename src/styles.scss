@@ -182,7 +182,7 @@ nav {
 }
 
 .orange {
-  background-color: $yellow;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
   background-size: cover;
   color: $purple;
 }
@@ -197,7 +197,7 @@ nav {
 
 .deepbluetitle {
   background-color: $lightblue;
-  color: $yellow;
+  color: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 50%, #cbd5e1 100%);
 }
 
 .slide {

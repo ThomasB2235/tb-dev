@@ -9,7 +9,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-
 .waitingwip {
   margin-top: 10vh;
   font-size: 3em;
@@ -19,6 +18,10 @@
 
 .backgroundProducts {
   background-color: $purple;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .contentProject {
@@ -38,7 +41,6 @@
   border-left: 1px solid $whiteyellow;
   border-right: 1px solid $whiteyellow;
 }
-
 
 .titleproducts {
   color: $whiteyellow;
