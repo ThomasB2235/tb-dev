@@ -14,11 +14,11 @@ import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 export class AboutComponent implements AfterViewInit {
   ghostCount = 0;
   ghosts: { id: string; exploded: boolean }[];
+  showPortal = false;
   readonly dialog = inject(MatDialog);
 
   @ViewChild('aboutSection') aboutSection!: ElementRef<HTMLElement>;
   @ViewChildren('aboutButton') aboutButtons!: QueryList<ElementRef<HTMLElement>>;
-
 
   constructor() {
     this.ghosts = [
@@ -102,20 +102,50 @@ export class AboutComponent implements AfterViewInit {
 
   explodeGhost(event: MouseEvent) {
     const ghostElement = event.currentTarget as HTMLElement;
-
     const ghostId = ghostElement.classList[1];
     const ghost = this.ghosts.find((ghost) => ghost.id === ghostId);
 
     if (ghost && !ghost.exploded) {
-      ghostElement.classList.add('explode');
       ghost.exploded = true;
+      ghostElement.classList.add('vanishing');
+      this.ghostCount++;
+
       setTimeout(() => {
-        ghostElement.remove();
-      }, 200);
+        ghostElement.style.display = 'none';
+      }, 500);
+
+      if (this.ghostCount === this.ghosts.length) {
+        this.triggerEasterEgg();
+      }
     }
   }
 
+  private triggerEasterEgg() {
+    // Activer le portail
+    this.showPortal = true;
+
+    // Jouer un son si disponible
+    const audio = new Audio('assets/sounds/portal.mp3');
+    audio.volume = 0.5;
+    audio.play().catch(() => {}); // Ignorer si le son n'est pas disponible
+
+    // Ajouter un effet de tremblement à l'écran
+    document.body.style.animation = 'shake 0.5s ease-in-out';
+    setTimeout(() => {
+      document.body.style.animation = '';
+    }, 500);
+
+    // Déclencher le dialogue après un délai
+    setTimeout(() => {
+      this.aboutButtons.first.nativeElement.dispatchEvent({
+        type: 'click',
+        bubbles: true
+      } as unknown as MouseEvent);
+    }, 2000);
+  }
+
   handleGhostClick(event: MouseEvent) {
+    event.stopPropagation();
     const target = event.target as HTMLElement;
     const ghostElement = target.closest('.ghost');
     if (ghostElement) {
@@ -124,6 +154,4 @@ export class AboutComponent implements AfterViewInit {
       } as unknown as MouseEvent);
     }
   }
-
-
 }
