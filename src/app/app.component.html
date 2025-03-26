@@ -1,15 +1,20 @@
+@if (showHeader) {
+  <app-header></app-header>
+}
 
+@if (showOtherComponents) {
+  <div class="container">
+    <app-skills></app-skills>
+    <app-products></app-products>
+    <app-about></app-about>
+  </div>
+}
 
-<app-header *ngIf="showHeader"></app-header>
-
-<div *ngIf="showOtherComponents" class="container">
-  <app-skills></app-skills>
-  <app-products></app-products>
-  <app-about></app-about>
-</div>
-
-<app-footer *ngIf="showFooter"></app-footer>
-<div *ngIf="showRouterOutlet">
-  <router-outlet></router-outlet>
-</div>
-
+@if (showFooter) {
+  <app-footer></app-footer>
+}
+@if (showRouterOutlet) {
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+}
