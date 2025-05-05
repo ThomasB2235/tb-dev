@@ -1,14 +1,5 @@
 @import '../../colors';
 
-.wip {
-  padding-top: 10vh;
-  text-align: center;
-  font-size: 15em;
-  background: -webkit-linear-gradient($orange, $lightyellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .backgroundProducts {
   background-color: $purple;
   min-height: 100vh;
@@ -51,7 +42,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   pointer-events: none;

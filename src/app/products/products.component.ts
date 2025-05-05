@@ -14,7 +14,7 @@ export class ProductsComponent {
   constructor(private router: Router) { }
 
   goToProject(projectId: string) {
-    this.router.navigate(['/projets', projectId]);
+    this.router.navigate([projectId]);
   }
 
 }
