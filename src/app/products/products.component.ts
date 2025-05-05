@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,5 +10,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
+
+  constructor(private router: Router) { }
+
+  goToProject(projectId: string) {
+    this.router.navigate(['/projets', projectId]);
+  }
 
 }
